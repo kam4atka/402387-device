@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+  </head>
+  <body>
+		<header class="main-header">
+			<span class="main-logo">Device</span>
+			<div class="user-navigation">
+				<input type="search" name="search" placeholder="Поиск по сайту">
+				<ul>
+					<li>Валентин Петухов</li>
+					<li>Войти</li>
+					<li>Сравнить</li>
+					<li>Корзина</li>
+				</ul>
+			</div>
+			<nav class="site-navigation">
+				<ul>
+					<li>Каталог товаров
+						<ul>
+							<li><a href="vr.html">Виртуальная реальность</a></li>
+							<li><a href="monopod.html">Моноподы для селфи</a></li>
+							<li><a href="camera.html">Экшн-камеры</a></li>
+							<li><a href="bracelet.html">Фитнес-браслеты</a></li>
+							<li><a href="watch.html">Умные часы</a></li>
+							<li><a href="quadrocopters.html">Квадрокоптеры</a></li>
+						</ul>
+					</li>
+					<li><a href="delivery.html">Доставка</a></li>
+					<li><a href="assurance.html">Гарантия</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h1 class="visually-hidden">Интернет-магазин гаджетов</h1>
+			<h2 class="main-title">Моноподы для селфи</h2>
+			<div class="breadcrumb">
+				<ul>
+					<li>Главная</li>
+					<li>Каталог товаров</li>
+					<li>Моноподы для селфи</li>
+				</ul>
+			</div>
+			<section class="catalog">
+				<h3 class="visually-hidden">Каталог товаров</h3>
+				<aside class="filters">
+					<div class="filter-title">Фильтр:</div>
+					<div class="filter-list">
+						<div class="filter-block">
+							<span class="filter-item-title">Стоимость</span>
+							<label>
+								<input type="range" min="0" max="10000" step="10" value="5000">
+							</label>
+						</div>
+						<div class="filter-block">
+							<span class="filter-item-title">Цвет</span>
+							<label>
+								<input type="checkbox">
+								Черный
+							</label>
+							<label>
+								<input type="checkbox">
+								Белый
+							</label>
+							<label>
+								<input type="checkbox">
+								Синий
+							</label>
+							<label>
+								<input type="checkbox">
+								Красный
+							</label>
+							<label>
+								<input type="checkbox">
+								Розовый
+							</label>
+						</div>
+						<div class="filter-block">
+							<span class="filter-item-title">Bluetooth</span>
+							<label>
+								<input type="radio">
+								Есть
+							</label>
+							<label>
+								<input type="radio">
+								Нет
+							</label>
+						</div>
+					</div>
+					<button type="button">Показать</button>
+				</aside>
+				<section class="products">
+					<div class="sorting">
+						<div class="sorting-title">Сортировка:</div>
+						<button type="button">По цене</button>
+						<button type="button">По типу</button>
+						<button type="button">По популярности</button>
+						<button type="button">По возврастанию</button>
+						<button type="button">По убыванию</button>
+					</div>
+					<h4 class="visually-hidden">Товары</h4>
+					<div class="product-box">
+						<img class="product-image" src="http://via.placeholder.com/360x380" alt="Любительская селфи-палка">
+						<span class="product-title">Любительская селфи-палка</span>
+						<span class="product-price">500 руб.</span>
+					</div>
+					<div class="product-box">
+						<img class="product-image" src="http://via.placeholder.com/360x380" alt="Профессиональная селфи-палка">
+						<span class="product-title">Профессиональная селфи-палка</span>
+						<span class="product-price">1500 руб.</span>
+					</div>
+					<div class="product-box">
+						<img class="product-image" src="http://via.placeholder.com/360x380" alt="Непотопляемая селфи-палка">
+						<span class="product-title">Непотопляемая селфи-палка</span>
+						<span class="product-price">2500 руб.</span>
+					</div>
+					<div class="product-box">
+						<img class="product-image product-new" src="http://via.placeholder.com/360x380" alt="Селфи-палка «Следуй за мной»">
+						<span class="product-title">Селфи-палка «Следуй за мной»</span>
+						<span class="product-price">4900 руб.</span>
+					</div>
+					<div class="pages">
+						<ul>
+							<li class="page-prev">Назад</li>
+							<li class="page-item">1</li>
+							<li class="page-item">2</li>
+							<li class="page-item">3</li>
+							<li class="page-next">Вперед</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+		</main>
+		<footer class="main-footer">
+			<div class="main-footer-line">
+				<span class="main-logo-footer">Device</span>
+				<div class="user-navigation-footer">
+					<ul>
+						<li>Валентин Петухов</li>
+						<li>Войти</li>
+						<li>Сравнить</li>
+						<li>Корзина</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main-footer-line">
+				<span class="footer-address">г. Москва, ул. Строителей, 15</span>
+				<nav class="site-navigation-footer">
+					<ul>
+						<li>Доставка</li>
+						<li>Гарантия</li>
+						<li>Контакты</li>
+					</ul>
+				</nav>
+				<span class="footer-phone">Тел.: +7 (495) 495-95-95</span>
+			</div>
+			<div class="main-footer-line">
+				<div class="footer-social">
+					<ul>
+						<li class="social-button">Facebook</li>
+						<li class="social-button">Instagram</li>
+						<li class="social-button">Twitter</li>
+					</ul>
+				</div>
+				<img  class="footer-developer" src="http://via.placeholder.com/27x35" alt="Логотип компании разработчика сайта">
+			</div>
+		</footer>
+  </body>
+</html>
