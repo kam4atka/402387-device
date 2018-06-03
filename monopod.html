@@ -63,8 +63,7 @@
 			</nav>
 		</header>
 		<main>
-			<h1 class="visually-hidden">Интернет-магазин гаджетов</h1>
-			<h2 class="main-title">Моноподы для селфи</h2>
+			<h1 class="main-title">Моноподы для селфи</h1>
 			<div class="breadcrumb">
 				<ul>
 					<li>
@@ -79,10 +78,10 @@
 				</ul>
 			</div>
 			<section class="catalog">
-				<h3 class="visually-hidden">Каталог товаров</h3>
+				<h2 class="visually-hidden">Каталог товаров</h2>
 				<aside class="filters">
 					<div class="filter-title">Фильтр:</div>
-					<div class="filter-list">
+					<form class="filter-list" action="#">
 						<div class="filter-block">
 							<span class="filter-item-title">Стоимость</span>
 							<div class="range">
@@ -124,10 +123,11 @@
 								Нет
 							</label>
 						</div>
-					</div>
-					<button class="filter-send" type="submit">Показать</button>
+						<button class="filter-send" type="submit">Показать</button>
+					</form>
 				</aside>
 				<section class="products">
+					<h2 class="visually-hidden">Товары</h2>
 					<div class="sorting">
 						<div class="sorting-title">Сортировка:</div>
 						<a class="sorting-item" href="#">По цене</a>
@@ -136,11 +136,14 @@
 						<a class="sorting-item" href="#">По возврастанию</a>
 						<a class="sorting-item" href="#">По убыванию</a>
 					</div>
-					<h4 class="visually-hidden">Товары</h4>
 					<div class="product-box">
 						<img class="product-image" src="http://via.placeholder.com/360x380" alt="Любительская селфи-палка">
-						<button type="submit">В корзину</button>
-						<button type="submit">Добавить к сравнению</button>
+						<form action="#">
+							<button type="submit">В корзину</button>
+						</form>
+						<form action="#">
+							<button type="submit">Добавить к сравнению</button>
+						</form>
 						<a href="#">
 							<span class="product-title">Любительская селфи-палка</span>
 						</a>
@@ -148,8 +151,12 @@
 					</div>
 					<div class="product-box">
 						<img class="product-image" src="http://via.placeholder.com/360x380" alt="Профессиональная селфи-палка">
-						<button type="submit">В корзину</button>
-						<button type="submit">Добавить к сравнению</button>
+						<form action="#">
+							<button type="submit">В корзину</button>
+						</form>
+						<form action="#">
+							<button type="submit">Добавить к сравнению</button>
+						</form>
 						<a href="#">
 							<span class="product-title">Профессиональная селфи-палка</span>
 						</a>
@@ -157,8 +164,12 @@
 					</div>
 					<div class="product-box">
 						<img class="product-image" src="http://via.placeholder.com/360x380" alt="Непотопляемая селфи-палка">
-						<button type="submit">В корзину</button>
-						<button type="submit">Добавить к сравнению</button>
+						<form action="#">
+							<button type="submit">В корзину</button>
+						</form>
+						<form action="#">
+							<button type="submit">Добавить к сравнению</button>
+						</form>
 						<a href="#">
 							<span class="product-title">Непотопляемая селфи-палка</span>
 						</a>
@@ -166,8 +177,12 @@
 					</div>
 					<div class="product-box">
 						<img class="product-image product-new" src="http://via.placeholder.com/360x380" alt="Селфи-палка «Следуй за мной»">
-						<button type="submit">В корзину</button>
-						<button type="submit">Добавить к сравнению</button>
+						<form action="#">
+							<button type="submit">В корзину</button>
+						</form>
+						<form action="#">
+							<button type="submit">Добавить к сравнению</button>
+						</form>
 						<a href="#">
 							<span class="product-title">Селфи-палка «Следуй за мной»</span>
 						</a>
