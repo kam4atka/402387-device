@@ -10,7 +10,8 @@
 				<span class="main-logo">Device</span>
 			</a>
 			<div class="user-navigation">
-				<input type="search" name="search" placeholder="Поиск по сайту">
+				<label class="visually-hidden" for="header-search">Поиск по сайту</label>
+				<input type="search" name="search" id="header-search" placeholder="Поиск по сайту">
 				<ul>
 					<li>
 						<a href="#">
@@ -88,7 +89,7 @@
 				<h2 class="visually-hidden">Каталог товаров</h2>
 				<aside class="filters">
 					<div class="filter-title">Фильтр:</div>
-					<form class="filter-list" action="#">
+					<form class="filter-list" action="https://echo.htmlacademy.ru" method="post">
 						<div class="filter-block">
 							<span class="filter-item-title">Стоимость</span>
 							<div class="range">
@@ -96,40 +97,40 @@
 								<span class="range-max"></span>
 							</div>
 						</div>
-						<div class="filter-block">
-							<span class="filter-item-title">Цвет</span>
+						<fieldset class="filter-block">
+							<legend class="filter-item-title">Цвет</legend>
 							<label>
-								<input type="checkbox">
+								<input type="checkbox" name="black" checked>
 								Черный
 							</label>
 							<label>
-								<input type="checkbox">
+								<input type="checkbox" name="white">
 								Белый
 							</label>
 							<label>
-								<input type="checkbox">
+								<input type="checkbox" name="blue" checked>
 								Синий
 							</label>
 							<label>
-								<input type="checkbox">
+								<input type="checkbox" name="red" checked>
 								Красный
 							</label>
 							<label>
-								<input type="checkbox">
+								<input type="checkbox" name="pink">
 								Розовый
 							</label>
-						</div>
-						<div class="filter-block">
-							<span class="filter-item-title">Bluetooth</span>
+						</fieldset>
+						<fieldset class="filter-block">
+							<legend class="filter-item-title">Bluetooth</legend>
 							<label>
-								<input type="radio">
+								<input type="radio" name="bluetooth-filter" value="yes" checked>
 								Есть
 							</label>
 							<label>
-								<input type="radio">
+								<input type="radio" name="bluetooth-filter" value="no">
 								Нет
 							</label>
-						</div>
+						</fieldset>
 						<button class="filter-send" type="submit">Показать</button>
 					</form>
 				</aside>
@@ -149,11 +150,13 @@
 					</div>
 					<div class="product-box">
 						<img class="product-image" src="img/product-item-01.png" width="360" height="380" alt="Любительская селфи-палка">
-						<form action="#">
-							<button type="submit">В корзину</button>
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<input type="hidden" name="id" value="001">
+							<button type="submit" name="card">В корзину</button>
 						</form>
-						<form action="#">
-							<button type="submit">Добавить к сравнению</button>
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<input type="hidden" name="id" value="001">
+							<button type="submit" name="compare">Добавить к сравнению</button>
 						</form>
 						<a href="#">
 							<span class="product-title">Любительская селфи-палка</span>
@@ -162,11 +165,13 @@
 					</div>
 					<div class="product-box">
 						<img class="product-image" src="img/product-item-02.png" width="360" height="380" alt="Профессиональная селфи-палка">
-						<form action="#">
-							<button type="submit">В корзину</button>
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<input type="hidden" name="id" value="002">
+							<button type="submit" name="card">В корзину</button>
 						</form>
-						<form action="#">
-							<button type="submit">Добавить к сравнению</button>
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<input type="hidden" name="id" value="002">
+							<button type="submit" name="compare">Добавить к сравнению</button>
 						</form>
 						<a href="#">
 							<span class="product-title">Профессиональная селфи-палка</span>
@@ -175,11 +180,13 @@
 					</div>
 					<div class="product-box">
 						<img class="product-image" src="img/product-item-03.png" width="360" height="380" alt="Непотопляемая селфи-палка">
-						<form action="#">
-							<button type="submit">В корзину</button>
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<input type="hidden" name="id" value="003">
+							<button type="submit" name="card">В корзину</button>
 						</form>
-						<form action="#">
-							<button type="submit">Добавить к сравнению</button>
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<input type="hidden" name="id" value="003">
+							<button type="submit" name="compare">Добавить к сравнению</button>
 						</form>
 						<a href="#">
 							<span class="product-title">Непотопляемая селфи-палка</span>
@@ -188,11 +195,13 @@
 					</div>
 					<div class="product-box">
 						<img class="product-image product-new" src="img/product-item-04.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-						<form action="#">
-							<button type="submit">В корзину</button>
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<input type="hidden" name="id" value="004">
+							<button type="submit" name="card">В корзину</button>
 						</form>
-						<form action="#">
-							<button type="submit">Добавить к сравнению</button>
+						<form action="https://echo.htmlacademy.ru" method="post">
+							<input type="hidden" name="id" value="004">
+							<button type="submit" name="compare">Добавить к сравнению</button>
 						</form>
 						<a href="#">
 							<span class="product-title">Селфи-палка «Следуй за мной»</span>
