@@ -90,13 +90,15 @@
 				<aside class="filters">
 					<div class="filter-title">Фильтр:</div>
 					<form class="filter-list" action="https://echo.htmlacademy.ru" method="post">
-						<div class="filter-block">
-							<span class="filter-item-title">Стоимость</span>
+						<fieldset class="filter-block">
+							<legend class="filter-item-title">Стоимость</legend>
 							<div class="range">
 								<span class="range-min"></span>
+								<input type="text" name="range-min">
 								<span class="range-max"></span>
+								<input type="text" name="range-max">
 							</div>
-						</div>
+						</fieldset>
 						<fieldset class="filter-block">
 							<legend class="filter-item-title">Цвет</legend>
 							<label>
@@ -141,9 +143,7 @@
 						<a class="sorting-item" href="#">По цене</a>
 						<a class="sorting-item" href="#">По типу</a>
 						<a class="sorting-item" href="#">По популярности</a>
-						<a class="sorting-item" href="#">
-							По возврастанию
-						</a>
+						<a class="sorting-item" href="#">По возврастанию</a>
 						<a class="sorting-item" href="#">
 							По убыванию
 						</a>
@@ -238,22 +238,16 @@
 				<div class="user-navigation-footer">
 					<ul>
 						<li>
-							<a href="#">
-								Валентин Петухов
-							</a>
+							<a href="#">Валентин Петухов</a>
 						</li>
 						<li>
 							<a href="#">Войти</a>
 						</li>
 						<li>
-							<a href="#">
-								Сравнить
-							</a>
+							<a href="#">Сравнить</a>
 						</li>
 						<li>
-							<a href="#">
-								Корзина
-							</a>
+							<a href="#">Корзина</a>
 						</li>
 					</ul>
 				</div>
@@ -279,22 +273,13 @@
 				<div class="footer-social">
 					<ul>
 						<li class="social-button">
-							<a href="#">
-								<img src="img/social-fb.svg" width="32" height="32" alt="Группа в фэйсбуке">
-								Facebook
-							</a>
+							<a href="#">Facebook</a>
 						</li>
 						<li class="social-button">
-							<a href="#">
-								<img src="img/social-in.svg" width="32" height="32" alt="Группа в инстаграмме">
-								Instagram
-							</a>
+							<a href="#">Instagram</a>
 						</li>
 						<li class="social-button">
-							<a href="#">
-								<img src="img/social-tw.svg" width="32" height="32" alt="Группа в Твиттере">
-								Twitter
-							</a>
+							<a href="#">Twitter</a>
 						</li>
 					</ul>
 				</div>

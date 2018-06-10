@@ -6,25 +6,24 @@
   </head>
   <body>
 		<header class="main-header">
-			<span class="main-logo">Device</span>
+			<a href="">
+				<span class="main-logo">Device</span>
+			</a>
 			<div class="user-navigation">
-				<label class="visually-hidden" for="header-search">Поиск по сайту</label>
-				<input type="search" name="search" id="header-search" placeholder="Поиск по сайту">
+				<form action="https://echo.htmlacademy.ru" method="post">
+					<label class="visually-hidden" for="header-search">Поиск по сайту</label>
+					<input type="search" name="search" id="header-search" placeholder="Поиск по сайту">
+					<button type="submit">Поиск</button>
+				</form>
 				<ul>
 					<li>
-						<a href="#">
-							Войти
-						</a>
+						<a href="#">Войти</a>
 					</li>
 					<li>
-						<a href="#">
-							Сравнить
-						</a>
+						<a href="#">Сравнить</a>
 					</li>
 					<li>
-						<a href="#">
-							Корзина
-						</a>
+						<a href="#">Корзина</a>
 					</li>
 				</ul>
 			</div>
@@ -123,9 +122,9 @@
 					</li>
 				</ul>
 				<div class="slider-controls">
-					<button class="slider-control" type="button">Первый слайд</button>
-					<button class="slider-control" type="button">Второй слайд</button>
-					<button class="slider-control" type="button">Третий слайд</button>
+					<label class="slider-control" for="slider-item-01">Первый слайд</label>
+					<label class="slider-control" for="slider-item-02">Второй слайд</label>
+					<label class="slider-control" for="slider-item-03">Третий слайд</label>
 				</div>
 			</section>
 			<section class="category">
@@ -134,7 +133,7 @@
 					<li class="category-item">
 						<a href="#">
 							<figure>
-								<img src="img/catalog-vr.svg" alt="">
+								<img src="img/catalog-vr.svg" alt="Виртуальная реальность">
 								<figcaption>Виртуальная реальность</figcaption>
 							</figure>
 						</a>
@@ -142,7 +141,7 @@
 					<li class="category-item">
 						<a href="monopod.html">
 							<figure>
-								<img src="img/catalog-mp.svg" alt="">
+								<img src="img/catalog-mp.svg" alt="Моноподы для селфи">
 								<figcaption>Моноподы для селфи</figcaption>
 							</figure>
 						</a>
@@ -150,7 +149,7 @@
 					<li class="category-item">
 						<a href="#">
 							<figure>
-								<img src="img/catalog-ac.svg" alt="">
+								<img src="img/catalog-ac.svg" alt="Экшн-камеры">
 								<figcaption>Экшн-камеры</figcaption>
 							</figure>
 						</a>
@@ -158,7 +157,7 @@
 					<li class="category-item">
 						<a href="#">
 							<figure>
-								<img src="img/catalog-fb.svg" alt="">
+								<img src="img/catalog-fb.svg" alt="Фитнес-браслеты">
 								<figcaption>Фитнес-браслеты</figcaption>
 							</figure>
 						</a>
@@ -166,7 +165,7 @@
 					<li class="category-item">
 						<a href="#">
 							<figure>
-								<img src="img/catalog-sw.svg" alt="">
+								<img src="img/catalog-sw.svg" alt="Умные часы">
 								<figcaption>Умные часы</figcaption>
 							</figure>
 						</a>
@@ -174,7 +173,7 @@
 					<li class="category-item">
 						<a href="#">
 							<figure>
-								<img src="img/catalog-kk.svg" alt="">
+								<img src="img/catalog-kk.svg" alt="Квадрокоптеры">
 								<figcaption>Квадрокоптеры</figcaption>
 							</figure>
 						</a>
@@ -184,9 +183,9 @@
 			<section class="services">
 				<h2 class="visually-hidden">Дополнительные услуги</h2>
 				<div class="service-controls">
-					<button class="service-control" type="button">Доставка</button>
-					<button class="service-control" type="button">Гарантия</button>
-					<button class="service-control" type="button">Кредит</button>
+					<label class="service-control" for="service-item-01">Доставка</label>
+					<label class="service-control" for="service-item-02">Гарантия</label>
+					<label class="service-control" for="service-item-03">Кредит</label>
 				</div>
 				<div class="service-items">
 					<div class="service-item">
@@ -261,19 +260,13 @@
 				<div class="user-navigation-footer">
 					<ul>
 						<li>
-							<a href="#">
-								Войти
-							</a>
+							<a href="#">Войти</a>
 						</li>
 						<li>
-							<a href="#">
-								Сравнить
-							</a>
+							<a href="#">Сравнить</a>
 						</li>
 						<li>
-							<a href="#">
-								Корзина
-							</a>
+							<a href="#">Корзина</a>
 						</li>
 					</ul>
 				</div>
@@ -299,22 +292,13 @@
 				<div class="footer-social">
 					<ul>
 						<li class="social-button">
-							<a href="#">
-								<img src="img/social-fb.svg" width="32" height="32" alt="Группа в фэйсбуке">
-								Facebook
-							</a>
+							<a href="#">Facebook</a>
 						</li>
 						<li class="social-button">
-							<a href="#">
-								<img src="img/social-in.svg" width="32" height="32" alt="Группа в инстаграмме">
-								Instagram
-							</a>
+							<a href="#">Instagram</a>
 						</li>
 						<li class="social-button">
-							<a href="#">
-								<img src="img/social-tw.svg" width="32" height="32" alt="Группа в Твиттере">
-								Twitter
-							</a>
+							<a href="#">Twitter</a>
 						</li>
 					</ul>
 				</div>
@@ -339,13 +323,23 @@
 					<textarea name="description" id="writeus-desc">В свободной форме</textarea>
 				</div>
 				<button class="modal-send" type="submit">Отправить</button>
-				<button class="modal-close" type="button">Закрыть</button>
 			</form>
+			<button class="modal-close" type="button">Закрыть</button>
 		</section>
 		<section class="modal modal-map">
 			<h2 class="visually-hidden">Место нахождения офиса на карте</h2>
 			<img src="img/map-big.jpg" width="960" height="560" alt="Место нахождения офиса на карте. Адрес: г. Москва, улица Строителей, 15">
 			<button class="modal-close" type="button">Закрыть</button>
 		</section>
+		<div>
+			<input type="radio" name="slider-item" id="slider-item-01">
+			<input type="radio" name="slider-item" id="slider-item-02">
+			<input type="radio" name="slider-item" id="slider-item-03">
+		</div>
+		<div>
+			<input type="radio" name="service-item" id="service-item-01">
+			<input type="radio" name="service-item" id="service-item-02">
+			<input type="radio" name="service-item" id="service-item-03">
+		</div>
   </body>
 </html>
