@@ -3,16 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 		<header class="main-header">
-			<a href="index.html">
-				<span class="main-logo">Device</span>
+			<a class="main-logo main-logo-link" href="index.html">
+				<span>Device</span>
 			</a>
-			<div class="user-navigation">
-				<label class="visually-hidden" for="header-search">Поиск по сайту</label>
-				<input type="search" name="search" id="header-search" placeholder="Поиск по сайту">
-				<ul>
+			<div>
+				<form class="header-search" action="https://echo.htmlacademy.ru" method="post">
+					<label class="visually-hidden" for="header-search">Поиск по сайту</label>
+					<input class="header-search-item" type="search" name="search" id="header-search" placeholder="Поиск по сайту">
+					<button class="header-search-send" type="submit">Найти</button>
+				</form>
+				<ul class="user-navigation">
 					<li>
 						<a href="#">
 							Валентин Петухов
@@ -33,11 +38,11 @@
 					</li>
 				</ul>
 			</div>
-			<nav class="site-navigation">
-				<ul>
+			<nav>
+				<ul class="site-navigation">
 					<li>
-						<span>Каталог товаров</span>
-						<ul>
+						<a>Каталог товаров</a>
+						<ul class="navigation-products">
 							<li>
 								<a href="#">Виртуальная реальность</a>
 							</li>
@@ -72,8 +77,8 @@
 		</header>
 		<main>
 			<h1 class="main-title">Моноподы для селфи</h1>
-			<div class="breadcrumb">
-				<ul>
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs-list">
 					<li>
 						<a href="index.html">Главная</a>
 					</li>
@@ -103,46 +108,46 @@
 						</fieldset>
 						<fieldset class="filter-block">
 							<legend class="filter-item-title">Цвет</legend>
-							<label>
+							<label class="filter-item-label">
 								<input type="checkbox" name="black" checked>
 								Черный
 							</label>
-							<label>
+							<label class="filter-item-label">
 								<input type="checkbox" name="white">
 								Белый
 							</label>
-							<label>
+							<label class="filter-item-label">
 								<input type="checkbox" name="blue" checked>
 								Синий
 							</label>
-							<label>
+							<label class="filter-item-label">
 								<input type="checkbox" name="red" checked>
 								Красный
 							</label>
-							<label>
-								<input type="checkbox" name="pink">
+							<label class="filter-item-label">
+								<input type="checkbox" name="pink" disabled>
 								Розовый
 							</label>
 						</fieldset>
 						<fieldset class="filter-block">
 							<legend class="filter-item-title">Bluetooth</legend>
-							<label>
+							<label class="filter-item-label">
 								<input type="radio" name="bluetooth-filter" value="yes" checked>
 								Есть
 							</label>
-							<label>
+							<label class="filter-item-label">
 								<input type="radio" name="bluetooth-filter" value="no">
 								Нет
 							</label>
 						</fieldset>
-						<button class="filter-send" type="submit">Показать</button>
+						<button class="button filter-send" type="submit">Показать</button>
 					</form>
 				</aside>
 				<section class="products">
 					<h2 class="visually-hidden">Товары</h2>
 					<div class="sorting">
 						<div class="sorting-title">Сортировка:</div>
-						<a class="sorting-item" href="#">По цене</a>
+						<a class="sorting-item sorting-item-active" href="#">По цене</a>
 						<a class="sorting-item" href="#">По типу</a>
 						<a class="sorting-item" href="#">По популярности</a>
 						<a class="sorting-item" href="#">По возврастанию</a>
@@ -152,11 +157,11 @@
 						<img class="product-image" src="img/product-item-01.png" width="360" height="380" alt="Любительская селфи-палка">
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<input type="hidden" name="id" value="001">
-							<button type="submit" name="card">В корзину</button>
+							<button class="button" type="submit" name="card">В корзину</button>
 						</form>
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<input type="hidden" name="id" value="001">
-							<button type="submit" name="compare">Добавить к сравнению</button>
+							<button class="product-compare" type="submit" name="compare">Добавить к сравнению</button>
 						</form>
 						<a href="#">
 							<span class="product-title">Любительская селфи-палка</span>
@@ -167,11 +172,11 @@
 						<img class="product-image" src="img/product-item-02.png" width="360" height="380" alt="Профессиональная селфи-палка">
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<input type="hidden" name="id" value="002">
-							<button type="submit" name="card">В корзину</button>
+							<button class="button" type="submit" name="card">В корзину</button>
 						</form>
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<input type="hidden" name="id" value="002">
-							<button type="submit" name="compare">Добавить к сравнению</button>
+							<button class="product-compare" type="submit" name="compare">Добавить к сравнению</button>
 						</form>
 						<a href="#">
 							<span class="product-title">Профессиональная селфи-палка</span>
@@ -182,11 +187,11 @@
 						<img class="product-image" src="img/product-item-03.png" width="360" height="380" alt="Непотопляемая селфи-палка">
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<input type="hidden" name="id" value="003">
-							<button type="submit" name="card">В корзину</button>
+							<button class="button" type="submit" name="card">В корзину</button>
 						</form>
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<input type="hidden" name="id" value="003">
-							<button type="submit" name="compare">Добавить к сравнению</button>
+							<button class="product-compare" type="submit" name="compare">Добавить к сравнению</button>
 						</form>
 						<a href="#">
 							<span class="product-title">Непотопляемая селфи-палка</span>
@@ -197,11 +202,11 @@
 						<img class="product-image product-new" src="img/product-item-04.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<input type="hidden" name="id" value="004">
-							<button type="submit" name="card">В корзину</button>
+							<button class="button" type="submit" name="card">В корзину</button>
 						</form>
 						<form action="https://echo.htmlacademy.ru" method="post">
 							<input type="hidden" name="id" value="004">
-							<button type="submit" name="compare">Добавить к сравнению</button>
+							<button class="product-compare" type="submit" name="compare">Добавить к сравнению</button>
 						</form>
 						<a href="#">
 							<span class="product-title">Селфи-палка «Следуй за мной»</span>
@@ -209,11 +214,11 @@
 						<span class="product-price">4900 руб.</span>
 					</div>
 					<nav class="products-navigation">
-						<ul>
+						<ul class="products-navigation-list">
 							<li class="page-prev">
 								<a href="#">Назад</a>
 							</li>
-							<li class="page-item">
+							<li class="page-item-active">
 								<a href="#" aria-label="Страница 1">1</a>
 							</li>
 							<li class="page-item">
@@ -232,11 +237,11 @@
 		</main>
 		<footer class="main-footer">
 			<div class="main-footer-line">
-				<a href="index.html">
-					<span class="main-logo-footer">Device</span>
+				<a class="main-logo main-logo-link" href="index.html">
+					<span class="footer-logo">Device</span>
 				</a>
-				<div class="user-navigation-footer">
-					<ul>
+				<div>
+					<ul class="user-navigation user-navigation-footer">
 						<li>
 							<a href="#">Валентин Петухов</a>
 						</li>
@@ -254,8 +259,8 @@
 			</div>
 			<div class="main-footer-line">
 				<span class="footer-address">г. Москва, ул. Строителей, 15</span>
-				<nav class="site-navigation-footer">
-					<ul>
+				<nav>
+					<ul class="site-navigation site-navigation-footer">
 						<li>
 							<a href="#">Доставка</a>
 						</li>
@@ -271,7 +276,7 @@
 			</div>
 			<div class="main-footer-line">
 				<div class="footer-social">
-					<ul>
+					<ul class="footer-social">
 						<li class="social-button">
 							<a href="#">Facebook</a>
 						</li>
@@ -284,7 +289,7 @@
 					</ul>
 				</div>
 				<a class="footer-developer" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
-					<img src="img/developer-logo.svg" width="27" height="35" alt="Логотип компании разработчика сайта">
+					<img src="img/developer-logo.png" width="27" height="35" alt="Переводит на сайт разработчика">
 				</a>
 			</div>
 		</footer>
