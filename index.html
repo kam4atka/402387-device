@@ -14,7 +14,7 @@
 		<input class="hide" type="radio" name="service-item" id="service-item-02">
 		<input class="hide" type="radio" name="service-item" id="service-item-03">
 		<header class="main-header">
-			<div class="wrapper main-wrapper border-box-component">
+			<div class="wrapper header-wrapper border-box-component">
 				<a class="main-logo">
 					<span class="header-logo">Device</span>
 				</a>
@@ -217,13 +217,25 @@
 						</div>
 					</div>
 				</section>
-				<section class="services">
+			</div>
+			<section class="services">
+				<div class="wrapper">
 					<h2 class="visually-hidden">Дополнительные услуги</h2>
 					<div class="service-wrapper">
 						<div class="service-controls">
-							<label class="service-control service-control-active border-box-component" for="service-item-01">Доставка</label>
-							<label class="button border-box-component" for="service-item-02">Гарантия</label>
-							<label class="button border-box-component" for="service-item-03">Кредит</label>
+
+							<label class="service-control-wrapper-active border-box-component" for="service-item-01">
+								<span class="service-control">Доставка</span>
+							</label>
+							
+							<label class="service-control-wrapper border-box-component" for="service-item-02">
+								<span class="service-control">Гарантия</span>
+							</label>
+							
+							<label class="service-control-wrapper border-box-component" for="service-item-03">
+								<span class="service-control">Кредит</span>
+							</label>
+							
 						</div>
 						<div class="service-items">
 							<div class="service-item">
@@ -245,7 +257,9 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
+			<div class="wrapper">
 				<section class="brands">
 					<h2 class="visually-hidden">Производители гаджетов</h2>
 					<ul class="brand-list">

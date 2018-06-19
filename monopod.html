@@ -8,7 +8,7 @@
   </head>
   <body>
 		<header class="main-header">
-			<div class="wrapper main-wrapper border-box-component">
+			<div class="wrapper header-wrapper border-box-component">
 				<a class="main-logo main-logo-link" href="index.html">
 					<span class="header-logo">Device</span>
 				</a>
@@ -25,7 +25,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#">Войти</a>
+							<a href="#">Выйти</a>
 						</li>
 						<li>
 							<a href="#">
@@ -43,7 +43,7 @@
 					<ul class="catalog-navigation">
 						<li>
 							<a>Каталог товаров</a>
-							<ul class="catalog-item-navigation">
+							<ul class="catalog-item-navigation hide">
 								<li>
 									<a href="#">Виртуальная реальность</a>
 								</li>
@@ -80,7 +80,7 @@
 			</div>
 		</header>
 		<main>
-			<div class="wrapper">
+			<div class="wrapper main-wrapper border-box-component">
 				<h1 class="main-title">Моноподы для селфи</h1>
 				<div class="breadcrumbs">
 					<ul class="breadcrumbs-list">
@@ -95,130 +95,157 @@
 						</li>
 					</ul>
 				</div>
-				<section class="catalog">
-					<h2 class="visually-hidden">Каталог товаров</h2>
-					<div class="catalog-wrapper">
+			</div>
+			<section class="catalog">
+				<h2 class="visually-hidden">Каталог товаров</h2>
+				<div class="catalog-title">
+					<div class="wrapper catalog-title-wrapper">
+						<div class="filter">
+							<p class="filter-title">Фильтр:</p>
+						</div>
+						<div class="sorting">
+							<p class="sorting-title">Сортировка:</p>
+							<a class="sorting-item sorting-item-active" href="#">По цене</a>
+							<a class="sorting-item" href="#">По типу</a>
+							<a class="sorting-item" href="#">По популярности</a>
+							<a class="sorting-item" href="#">По возврастанию</a>
+							<a class="sorting-item" href="#">По убыванию</a>
+						</div>
+					</div>
+				</div>
+				<div class="catalog-content">
+					<div class="wrapper catalog-content-wrapper">
 						<aside class="filters">
-							<div class="filter-title">Фильтр:</div>
-							<form class="filter-list" action="https://echo.htmlacademy.ru" method="post">
-								<fieldset class="filter-block">
-									<legend class="filter-item-title">Стоимость</legend>
-									<div class="range">
-										<span class="range-min"></span>
-										<label class="visually-hidden" for="range-min">Минимальная стоимость</label>
-										<input type="text" name="range-min" id="range-min">
-										<span class="range-max"></span>
-										<label class="visually-hidden" for="range-max">Максимальная стоимость</label>
-										<input type="text" name="range-max" id="range-max">
-									</div>
-								</fieldset>
-								<fieldset class="filter-block">
-									<legend class="filter-item-title">Цвет</legend>
-									<label class="filter-item-label">
-										<input type="checkbox" name="black" checked>
-										Черный
-									</label>
-									<label class="filter-item-label">
-										<input type="checkbox" name="white">
-										Белый
-									</label>
-									<label class="filter-item-label">
-										<input type="checkbox" name="blue" checked>
-										Синий
-									</label>
-									<label class="filter-item-label">
-										<input type="checkbox" name="red" checked>
-										Красный
-									</label>
-									<label class="filter-item-label">
-										<input type="checkbox" name="pink" disabled>
-										Розовый
-									</label>
-								</fieldset>
-								<fieldset class="filter-block">
-									<legend class="filter-item-title">Bluetooth</legend>
-									<label class="filter-item-label">
-										<input type="radio" name="bluetooth-filter" value="yes" checked>
-										Есть
-									</label>
-									<label class="filter-item-label">
-										<input type="radio" name="bluetooth-filter" value="no">
-										Нет
-									</label>
-								</fieldset>
+							<form class="filters-list" action="https://echo.htmlacademy.ru" method="post">
+								<div class="filter-block">
+									<fieldset>
+										<legend class="filter-item-title">Стоимость</legend>
+										<div class="range">
+											<span class="range-min"></span>
+											<label class="visually-hidden" for="range-min">Минимальная стоимость</label>
+											<input type="text" name="range-min" id="range-min">
+											<span class="range-max"></span>
+											<label class="visually-hidden" for="range-max">Максимальная стоимость</label>
+											<input type="text" name="range-max" id="range-max">
+										</div>
+									</fieldset>
+								</div>
+								<div class="filter-block">
+									<fieldset class="filter-block">
+										<legend class="filter-item-title">Цвет</legend>
+										<div class="filter-parametrs">
+											<label class="filter-item-label">
+												<input type="checkbox" name="black" checked>
+												Черный
+											</label>
+											<label class="filter-item-label">
+												<input type="checkbox" name="white">
+												Белый
+											</label>
+											<label class="filter-item-label">
+												<input type="checkbox" name="blue" checked>
+												Синий
+											</label>
+											<label class="filter-item-label">
+												<input type="checkbox" name="red" checked>
+												Красный
+											</label>
+											<label class="filter-item-label">
+												<input type="checkbox" name="pink" disabled>
+												Розовый
+											</label>
+										</div>
+									</fieldset>
+								</div>
+								<div class="filter-block">
+									<fieldset class="filter-block">
+										<legend class="filter-item-title">Bluetooth</legend>
+										<div class="filter-parametrs">
+											<label class="filter-item-label">
+												<input type="radio" name="bluetooth-filter" value="yes" checked>
+												Есть
+											</label>
+											<label class="filter-item-label">
+												<input type="radio" name="bluetooth-filter" value="no">
+												Нет
+											</label>
+										</div>
+									</fieldset>
+								</div>
 								<button class="button filter-send" type="submit">Показать</button>
 							</form>
 						</aside>
 						<section class="products">
 							<h2 class="visually-hidden">Товары</h2>
-							<div class="sorting">
-								<div class="sorting-title">Сортировка:</div>
-								<a class="sorting-item sorting-item-active" href="#">По цене</a>
-								<a class="sorting-item" href="#">По типу</a>
-								<a class="sorting-item" href="#">По популярности</a>
-								<a class="sorting-item" href="#">По возврастанию</a>
-								<a class="sorting-item" href="#">По убыванию</a>
-							</div>
 							<div class="product-items">
 								<div class="product-box">
 									<img class="product-image" src="img/product-item-01.png" width="360" height="380" alt="Любительская селфи-палка">
-									<form action="https://echo.htmlacademy.ru" method="post">
+
+									<form class="hide" action="https://echo.htmlacademy.ru" method="post">
 										<input type="hidden" name="id" value="001">
 										<button class="button" type="submit" name="card">В корзину</button>
 									</form>
-									<form action="https://echo.htmlacademy.ru" method="post">
+									<form class="hide" action="https://echo.htmlacademy.ru" method="post">
 										<input type="hidden" name="id" value="001">
 										<button class="product-compare" type="submit" name="compare">Добавить к сравнению</button>
 									</form>
-									<a href="#">
-										<span class="product-title">Любительская селфи-палка</span>
-									</a>
-									<span class="product-price">500 руб.</span>
+									<div class="product-desc">
+										<a href="#">
+											<span class="product-title">Любительская селфи-палка</span>
+										</a>
+										<span class="product-price">500 руб.</span>
+									</div>
 								</div>
 								<div class="product-box">
 									<img class="product-image" src="img/product-item-02.png" width="360" height="380" alt="Профессиональная селфи-палка">
-									<form action="https://echo.htmlacademy.ru" method="post">
+									<form class="hide" action="https://echo.htmlacademy.ru" method="post">
 										<input type="hidden" name="id" value="002">
 										<button class="button" type="submit" name="card">В корзину</button>
 									</form>
-									<form action="https://echo.htmlacademy.ru" method="post">
+									<form class="hide" action="https://echo.htmlacademy.ru" method="post">
 										<input type="hidden" name="id" value="002">
 										<button class="product-compare" type="submit" name="compare">Добавить к сравнению</button>
 									</form>
-									<a href="#">
-										<span class="product-title">Профессиональная селфи-палка</span>
-									</a>
-									<span class="product-price">1500 руб.</span>
+									<div class="product-desc">
+										<a href="#">
+											<span class="product-title">Профессиональная селфи-палка</span>
+										</a>
+										<span class="product-price">1500 руб.</span>
+									</div>
 								</div>
 								<div class="product-box">
 									<img class="product-image" src="img/product-item-03.png" width="360" height="380" alt="Непотопляемая селфи-палка">
-									<form action="https://echo.htmlacademy.ru" method="post">
+									<form class="hide" action="https://echo.htmlacademy.ru" method="post">
 										<input type="hidden" name="id" value="003">
 										<button class="button" type="submit" name="card">В корзину</button>
 									</form>
-									<form action="https://echo.htmlacademy.ru" method="post">
+									<form class="hide" action="https://echo.htmlacademy.ru" method="post">
 										<input type="hidden" name="id" value="003">
 										<button class="product-compare" type="submit" name="compare">Добавить к сравнению</button>
 									</form>
-									<a href="#">
-										<span class="product-title">Непотопляемая селфи-палка</span>
-									</a>
-									<span class="product-price">2500 руб.</span>
+									<div class="product-desc">
+										<a href="#">
+											<span class="product-title">Непотопляемая селфи-палка</span>
+										</a>
+										<span class="product-price">2500 руб.</span>
+									</div>
 								</div>
 								<div class="product-box">
 									<img class="product-image product-new" src="img/product-item-04.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-									<form action="https://echo.htmlacademy.ru" method="post">
+									<form class="hide" action="https://echo.htmlacademy.ru" method="post">
 										<input type="hidden" name="id" value="004">
 										<button class="button" type="submit" name="card">В корзину</button>
 									</form>
-									<form action="https://echo.htmlacademy.ru" method="post">
+									<form class="hide" action="https://echo.htmlacademy.ru" method="post">
 										<input type="hidden" name="id" value="004">
 										<button class="product-compare" type="submit" name="compare">Добавить к сравнению</button>
 									</form>
-									<a href="#">
-										<span class="product-title">Селфи-палка «Следуй за мной»</span>
-									</a>
-									<span class="product-price">4900 руб.</span>
+									<div class="product-desc">
+										<a href="#">
+											<span class="product-title">Селфи-палка «Следуй за мной»</span>
+										</a>
+										<span class="product-price">4900 руб.</span>
+									</div>
 								</div>
 							</div>
 							<nav class="products-navigation">
@@ -242,8 +269,9 @@
 							</nav>
 						</section>
 					</div>
-				</section>
-			</div>
+				</div>
+
+			</section>
 		</main>
 		<footer class="main-footer">
 			<div class="wrapper">
@@ -256,7 +284,7 @@
 							<a href="#">Валентин Петухов</a>
 						</li>
 						<li>
-							<a href="#">Войти</a>
+							<a href="#">Выйти</a>
 						</li>
 						<li>
 							<a href="#">Сравнить</a>

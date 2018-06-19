@@ -40,7 +40,16 @@ a {
 	text-decoration: none;
 }
 
-figure, p {
+figure,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+fieldset {
 	margin: 0;
 	padding: 0;
 }
@@ -167,7 +176,7 @@ figure, p {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	background: linear-gradient(rgba(240,197,46,0.5) 0px, rgba(240,197,46,0.5) 130px, transparent 130px);
+	background: linear-gradient(rgba(240,197,46,0.5) 0px, rgba(240,197,46,0.5) 110px, transparent 110px);
 }
 
 .slider-item-title {
@@ -211,8 +220,9 @@ figure, p {
 	z-index: -1;
 }
 
-.button:hover {
-	background-color: #f0c52e;
+.button:hover:before {
+	top: 0;
+	height: 100%;
 }
 
 .button:active {
@@ -270,10 +280,11 @@ figure, p {
 
 .services {
 	height: 390px;
+	background: linear-gradient(transparent 0, transparent 100px, #e5e5e5 100px);
 }
 
 .services, .brands, .info-wrapper {
-	margin-bottom: 95px;
+	margin-bottom: 90px;
 }
 
 .service-controls {
@@ -292,11 +303,50 @@ figure, p {
 	text-transform: uppercase;
 }
 
-.service-control-active, .service-control:active {
+.service-control-wrapper, .service-control-wrapper-active, .service-control-wrapper:active {
 	width: 100%;
+	margin-bottom: 25px;
 	padding: 14px 0 14px 20px;
-	color: #f7e184;
+}
+
+.service-control-wrapper-active, .service-control-wrapper:active {
 	background-color: #000000;
+}
+
+.service-control-wrapper-active .service-control,
+.service-control-wrapper:active .service-control {
+	color: #f7e184;
+}
+
+.service-control-wrapper-active .service-control:before,
+.service-control-wrapper:active .service-control:before {
+	content: none;
+	background: none;
+}
+
+.service-control {
+	position: relative;
+	display: inline-block;
+	width: 160px;
+	text-align: center;
+	z-index: 1;
+}
+
+.service-control:before {
+	position: absolute;
+	display: block;
+	top: 8px;
+	left: 0;
+	width: 100%;
+	height: 8px;
+	content: "";
+	background-color: #f0c52e;
+	z-index: -1;
+}
+
+.service-control-wrapper:hover .service-control:before {
+	top: 0;
+	height: 100%;
 }
 
 .service-item {
@@ -327,6 +377,7 @@ figure, p {
 }
 
 .aboutus h2, .contacts h2 {
+	padding: 50px 0;
 	font-family: "Gilroy", "Aria", sans-serif;
 	font-size: 47px;
 	font-weight: 400;
@@ -336,7 +387,7 @@ figure, p {
 }
 
 .aboutus p, .contacts p {
-	padding-bottom: 40px;
+	padding: 10px;
 }
 
 .transport-list {
@@ -383,6 +434,30 @@ figure, p {
 	color: rgba(0,0,0,0.1);
 }
 
+.catalog-title {
+	background: linear-gradient(to right, #dbdbdb 30%, #ebebeb 30%);
+}
+
+.catalog-content {
+	background: linear-gradient(to right, #ebebeb 30%, transparent 30%);
+}
+
+.filter {
+	background-color: #dbdbdb;
+}
+
+.filters {
+	background-color: #ebebeb;
+}
+
+.filter-block {
+	border-top: 2px solid #000000;
+}
+
+.filter-block fieldset {
+	border: none;
+}
+
 .filter-title, .sorting-title {
 	font-family: "Gilroy", "Aria", sans-serif;
 	font-size: 16px;
@@ -407,7 +482,7 @@ figure, p {
 	line-height: 40px;
 	letter-spacing: 0.14px;
 	color: #000000;
- }
+}
 
 input[type=checkbox][disabled] {
 	color: #a6a6a6;
@@ -512,13 +587,13 @@ input[type=checkbox][disabled] {
 }
 
 .main-footer {
-	padding-top: 50px;
+	padding-top: 60px;
 	background-color: #464646;
 	color: #ffffff;
 }
 
 .main-footer-line {
-	padding-bottom: 40px;
+	padding-bottom: 50px;
 }
 
 .footer-logo {
@@ -609,10 +684,15 @@ input[type=checkbox][disabled] {
 	margin: 0 auto;
 }
 
-.main-wrapper {
+.header-wrapper {
 	margin-top: 20px;
 	padding: 0 60px;
 	background: linear-gradient(transparent 0px, transparent 20px, rgba(240,197,46,0.5) 20px);
+}
+
+.main-wrapper {
+	padding-top: 30px;
+	padding-left: 60px;
 }
 
 .header-layout {
@@ -620,6 +700,10 @@ input[type=checkbox][disabled] {
 	justify-content: space-between;
 	padding-bottom: 30px;
   padding-top: 10px;
+}
+
+.header-layout:last-child {
+	padding-bottom: 50px;
 }
 
 .user-navigation,
@@ -659,7 +743,7 @@ input[type=checkbox][disabled] {
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-end;
-	margin-bottom: 110px;
+	margin-bottom: 100px;
 }
 
 .slider-item-right {
@@ -707,6 +791,123 @@ input[type=checkbox][disabled] {
 	justify-content: space-between;
 }
 
+.main-title {
+	margin-bottom: 20px;
+}
+
+.breadcrumbs {
+	margin-bottom: 50px;
+}
+
+.breadcrumbs-list {
+	display: flex;
+	flex-direction: row;
+}
+
+.breadcrumbs-list li {
+	margin-right: 35px;
+}
+
+.catalog-title-wrapper {
+	display: flex;
+}
+
+.catalog-content-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.sorting {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 25px 0 25px 75px;
+}
+
+.filter, .filters {
+	min-width: 265px;
+}
+
+.filter {
+	padding: 25px 0 25px 60px;
+}
+
+.filters {
+	padding: 60px 0 0 60px;
+}
+
+.filter-block {
+	max-width: 200px;
+	margin-bottom: 40px;
+}
+
+.filter-item-title {
+	padding: 10px 0;
+}
+
+.filter-parametrs {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.category-image-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.product-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 60px;
+	padding-left: 70px;
+}
+
+.product-box {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.product-image {
+	margin-bottom: 35px;
+}
+
+.product-desc {
+	display: flex;
+	justify-content: space-between;
+}
+
+.product-desc a {
+	max-width: 230px;
+}
+
+.products-navigation {
+	margin: 0 0 75px 60px;
+}
+
+.products-navigation-list {
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+}
+
+.products-navigation-list li {
+	margin-right: 30px;
+}
+
+.products-navigation-list li:first-child {
+	margin-right: auto;
+}
+
+.products-navigation-list li:last-child {
+	margin-left: auto;
+	margin-right: 0;
+}
+
 .main-footer-line {
 	display: flex;
 	justify-content: space-between;
@@ -728,43 +929,6 @@ input[type=checkbox][disabled] {
 .footer-social {
 	display: flex;
 	justify-content: space-between;
-}
-
-.breadcrumbs-list li {
-	display: inline-block;
-}
-
-.catalog-wrapper {
-	display: flex;
-}
-
-.catalog-wrapper .filters {
-	width: 325px;
-}
-
-.category-image-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.product-items {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
-.products-navigation-list {
-	display: flex;
-	justify-content: center;
-}
-
-.products-navigation-list li:first-child {
-	margin-right: auto;
-}
-
-.products-navigation-list li:last-child {
-	margin-left: auto;
 }
 
 .hide {
