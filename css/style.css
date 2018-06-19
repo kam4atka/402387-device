@@ -207,6 +207,7 @@ fieldset {
 	color: #000000;
 	border: none;
 	background-color: transparent;
+	z-index: 1;
 }
 
 .button:before {
