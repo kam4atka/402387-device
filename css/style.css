@@ -116,6 +116,7 @@ img {
 
 .header-search-item:focus + .header-search-send {
 	display: inline-block;
+	vertical-align: top;
 }
 
 .header-search-send:hover {
@@ -179,7 +180,7 @@ img {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	background: linear-gradient(rgba(240,197,46,0.5) 0px, rgba(240,197,46,0.5) 110px, transparent 110px);
+	background-image: linear-gradient(rgba(240,197,46,0.5) 0px, rgba(240,197,46,0.5) 110px, transparent 110px);
 }
 
 .slider-item-title {
@@ -200,6 +201,7 @@ img {
 	display: inline-block;
 	width: 220px;
 	padding: 8px 0 8px 0;
+	vertical-align: top;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
 	font-weight: 400;
@@ -281,7 +283,7 @@ img {
 
 .services {
 	height: 390px;
-	background: linear-gradient(transparent 0, transparent 100px, #e5e5e5 100px);
+	background-image: linear-gradient(transparent 0, transparent 100px, #e5e5e5 100px);
 }
 
 .service-controls {
@@ -300,7 +302,8 @@ img {
 	text-transform: uppercase;
 }
 
-.service-control-wrapper-active, .service-control-wrapper:active {
+.service-control-wrapper-active,
+.service-control-wrapper:active {
 	background-color: #000000;
 }
 
@@ -312,7 +315,7 @@ img {
 .service-control-wrapper-active .service-control:before,
 .service-control-wrapper:active .service-control:before {
 	content: none;
-	background: none;
+	background-color: transparent;
 }
 
 .service-title {
@@ -333,7 +336,8 @@ img {
 	opacity: 0;
 }
 
-.aboutus h2, .contacts h2 {
+.aboutus h2,
+.contacts h2 {
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 47px;
 	font-weight: 400;
@@ -354,7 +358,7 @@ img {
 	list-style: none;
 }
 
-.breadcrumbs-list li a {
+.breadcrumbs-list a {
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 14px;
 	font-weight: 300;
@@ -363,30 +367,20 @@ img {
 	color: rgba(0,0,0,0.3);
 }
 
-.breadcrumbs-list li:not(:last-child) a:hover {
-	font-family: "Open Sans", "Arial", sans-serif;
-	font-size: 14px;
-	font-weight: 300;
-	line-height: 24px;
-	letter-spacing: 0.14px;
+.breadcrumbs-item a:hover {
 	color: rgba(0,0,0,0.6);
 }
 
-.breadcrumbs-list li:not(:last-child) a:active {
-	font-family: "Open Sans", "Arial", sans-serif;
-	font-size: 14px;
-	font-weight: 300;
-	line-height: 24px;
-	letter-spacing: 0.14px;
+.breadcrumbs-item a:active {
 	color: rgba(0,0,0,0.1);
 }
 
 .catalog-title {
-	background: linear-gradient(to right, #dbdbdb 30%, #ebebeb 30%);
+	background-image: linear-gradient(to right, #dbdbdb 30%, #ebebeb 30%);
 }
 
 .catalog-content {
-	background: linear-gradient(to right, #ebebeb 30%, transparent 30%);
+	background-image: linear-gradient(to right, #ebebeb 30%, transparent 30%);
 }
 
 .filter {
@@ -405,7 +399,8 @@ img {
 	border: none;
 }
 
-.filter-title, .sorting-title {
+.filter-title,
+.sorting-title {
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -623,9 +618,9 @@ input[type=checkbox][disabled] {
 }
 
 .header-wrapper {
-	margin-top: 40px;
+	margin-top: 20px;
 	padding: 0 60px;
-	background: linear-gradient(transparent 0px, transparent 20px, rgba(240,197,46,0.5) 20px);
+	background-image: linear-gradient(transparent 0px, transparent 20px, rgba(240,197,46,0.5) 20px);
 }
 
 .main-wrapper {
@@ -718,14 +713,15 @@ input[type=checkbox][disabled] {
 	flex-direction: column-reverse;
 }
 
-.slider-item-parameters tbody th,
-.slider-item-parameters tbody td {
+.slider-item-parameters th,
+.slider-item-parameters td {
 	display: inline-block;
+	vertical-align: top;
 	margin-right: 70px;
 }
 
-.slider-item-parameters tbody th:last-child,
-.slider-item-parameters tbody td:last-child {
+.slider-item-parameters th:last-child,
+.slider-item-parameters td:last-child {
 	margin: 0;
 }
 
@@ -740,7 +736,9 @@ input[type=checkbox][disabled] {
 	padding: 0;
 }
 
-.services, .brands, .info-wrapper {
+.services,
+.brands,
+.info-wrapper {
 	margin-bottom: 90px;
 }
 
@@ -776,6 +774,7 @@ input[type=checkbox][disabled] {
 	position: relative;
 	display: inline-block;
 	width: 160px;
+	vertical-align: middle;
 	text-align: center;
 	z-index: 1;
 }
@@ -831,16 +830,19 @@ input[type=checkbox][disabled] {
 	justify-content: space-between;
 }
 
-.aboutus, .contacts {
+.aboutus,
+.contacts {
 	width: 560px;
 }
 
-.aboutus h2, .contacts h2 {
+.aboutus h2,
+.contacts h2 {
 	margin: 0;
 	padding: 50px 0 40px 0;
 }
 
-.aboutus p, .contacts p {
+.aboutus p,
+.contacts p {
 	width: 500px;
 	margin: 0;
 	padding: 0 0 30px 0;
@@ -885,7 +887,8 @@ input[type=checkbox][disabled] {
 	justify-content: space-between;
 }
 
-.filter, .filters {
+.filter,
+.filters {
 	min-width: 330px;
 }
 
