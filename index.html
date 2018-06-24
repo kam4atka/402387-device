@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-		<input class="hide" type="radio" name="slider-item" id="slider-item-01">
-		<input class="hide" type="radio" name="slider-item" id="slider-item-02">
-		<input class="hide" type="radio" name="slider-item" id="slider-item-03">
 		<input class="hide" type="radio" name="service-item" id="service-item-01">
 		<input class="hide" type="radio" name="service-item" id="service-item-02">
 		<input class="hide" type="radio" name="service-item" id="service-item-03">
@@ -20,6 +17,7 @@
 				</a>
 				<div class="header-layout">
 					<form class="header-search" action="https://echo.htmlacademy.ru" method="post">
+						<button class="header-search-icon" type="submit"></button>
 						<label class="visually-hidden" for="header-search">Поиск по сайту</label>
 						<input class="header-search-item" type="search" name="search" id="header-search" placeholder="Поиск по сайту">
 						<button class="header-search-send" type="submit">Найти</button>
@@ -29,17 +27,17 @@
 							<a class="login-link" href="#">Войти</a>
 						</li>
 						<li>
-							<a href="#">Сравнить</a>
+							<a class="compare-link" href="#">Сравнить</a>
 						</li>
 						<li>
-							<a href="#">Корзина</a>
+							<a class="cart-link" href="#">Корзина</a>
 						</li>
 					</ul>
 				</div>
 				<nav class="header-layout">
 					<ul class="catalog-navigation">
 						<li>
-							<a>Каталог товаров</a>
+							<a class="catalog-list">Каталог товаров</a>
 							<ul class="catalog-item-navigation hide">
 								<li>
 									<a href="#">Виртуальная реальность</a>
@@ -110,7 +108,7 @@
 								<img src="img/slider-item-02.png" width="385" height="485" alt="Фитнес-браслет">
 							</div>
 							<div class="slider-item-right">
-								<p class="slider-item-title">Худеем правильно!</p>
+								<p class="slider-item-title">Худеем <br>правильно!</p>
 								<p class="slider-item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 								<a class="button" href="#">Подробнее</a>
 								<table class="slider-item-parameters">
@@ -146,9 +144,12 @@
 							</div>
 						</li>
 					</ul>
-					<div class="slider-controls hide">
+					<div class="slider-controls">
+						<input class="hide" type="radio" name="slider-item" id="slider-item-01" checked>
 						<label class="slider-control" for="slider-item-01">Первый слайд</label>
+						<input class="hide" type="radio" name="slider-item" id="slider-item-02">
 						<label class="slider-control" for="slider-item-02">Второй слайд</label>
+						<input class="hide" type="radio" name="slider-item" id="slider-item-03">
 						<label class="slider-control" for="slider-item-03">Третий слайд</label>
 					</div>
 				</section>
@@ -320,13 +321,13 @@
 					</a>
 					<ul class="user-navigation user-navigation-footer">
 						<li>
-							<a href="#">Войти</a>
+							<a class="login-link-footer" href="#">Войти</a>
 						</li>
 						<li>
-							<a href="#">Сравнить</a>
+							<a class="compare-link-footer" href="#">Сравнить</a>
 						</li>
 						<li>
-							<a href="#">Корзина</a>
+							<a class="cart-link-footer" href="#">Корзина</a>
 						</li>
 					</ul>
 				</div>
@@ -350,14 +351,14 @@
 				<div class="main-footer-line">
 					<div class="footer-decorate"></div>
 					<ul class="footer-social">
-						<li class="social-button">
-							<a href="#">Facebook</a>
+						<li>
+							<a class="social-button social-facebook" href="#">Facebook</a>
 						</li>
-						<li class="social-button">
-							<a href="#">Instagram</a>
+						<li>
+							<a class="social-button social-instagram" href="#">Instagram</a>
 						</li>
-						<li class="social-button">
-							<a href="#">Twitter</a>
+						<li>
+							<a class="social-button social-twitter" href="#">Twitter</a>
 						</li>
 					</ul>
 					<a class="footer-developer" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
