@@ -14,13 +14,14 @@
 				</a>
 				<div class="header-layout">
 					<form class="header-search" action="https://echo.htmlacademy.ru" method="post">
+						<button class="header-search-icon" type="submit"></button>
 						<label class="visually-hidden" for="header-search">Поиск по сайту</label>
 						<input class="header-search-item" type="search" name="search" id="header-search" placeholder="Поиск по сайту">
 						<button class="header-search-send" type="submit">Найти</button>
 					</form>
 					<ul class="user-navigation">
 						<li>
-							<a href="#">
+							<a href="#" class="login-link">
 								Валентин Петухов
 							</a>
 						</li>
@@ -28,12 +29,12 @@
 							<a href="#">Выйти</a>
 						</li>
 						<li>
-							<a href="#">
+							<a class="compare-link"  href="#">
 								Сравнить
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a class="cart-link" href="#">
 								Корзина
 							</a>
 						</li>
@@ -42,7 +43,7 @@
 				<nav class="header-layout">
 					<ul class="catalog-navigation">
 						<li>
-							<a>Каталог товаров</a>
+							<a class="catalog-list">Каталог товаров</a>
 							<ul class="catalog-item-navigation hide">
 								<li>
 									<a href="#">Виртуальная реальность</a>
@@ -108,8 +109,8 @@
 							<a class="sorting-item sorting-item-active" href="#">По цене</a>
 							<a class="sorting-item" href="#">По типу</a>
 							<a class="sorting-item" href="#">По популярности</a>
-							<a class="sorting-item" href="#">По возврастанию</a>
-							<a class="sorting-item" href="#">По убыванию</a>
+							<a class="sorting-item sorting-up sorting-item-active" href="#">По возврастанию</a>
+							<a class="sorting-item sorting-down" href="#">По убыванию</a>
 						</div>
 					</div>
 				</div>
@@ -121,54 +122,41 @@
 									<fieldset>
 										<legend class="filter-item-title">Стоимость</legend>
 										<div class="range">
-											<span class="range-min"></span>
+											<div class="range-line"></div>
+											<span class="range-min hide"></span>
 											<label class="visually-hidden" for="range-min">Минимальная стоимость</label>
-											<input type="text" name="range-min" id="range-min">
-											<span class="range-max"></span>
+											<input class="hide" type="text" name="range-min" id="range-min">
+											<span class="range-max hide"></span>
 											<label class="visually-hidden" for="range-max">Максимальная стоимость</label>
-											<input type="text" name="range-max" id="range-max">
+											<input class="hide" type="text" name="range-max" id="range-max">
 										</div>
 									</fieldset>
 								</div>
 								<div class="filter-block">
 									<fieldset class="filter-block">
 										<legend class="filter-item-title">Цвет</legend>
-										<div class="filter-parametrs">
-											<label class="filter-item-label">
-												<input type="checkbox" name="black" checked>
-												Черный
-											</label>
-											<label class="filter-item-label">
-												<input type="checkbox" name="white">
-												Белый
-											</label>
-											<label class="filter-item-label">
-												<input type="checkbox" name="blue" checked>
-												Синий
-											</label>
-											<label class="filter-item-label">
-												<input type="checkbox" name="red" checked>
-												Красный
-											</label>
-											<label class="filter-item-label">
-												<input type="checkbox" name="pink" disabled>
-												Розовый
-											</label>
+										<div class="filter-parameters">
+											<input type="checkbox" name="black" id="filter-black" checked>
+											<label for="filter-black">Черный</label>
+											<input type="checkbox" name="white" id="filter-white">
+											<label for="filter-white">Белый</label>
+											<input type="checkbox" name="blue" id="filter-blue" checked>
+											<label for="filter-blue">Синий</label>
+											<input type="checkbox" name="red"  id="filter-red" checked>
+											<label for="filter-red">Красный</label>
+											<input type="checkbox" name="pink" id="filter-pink" disabled>
+											<label for="filter-pink">Розовый</label>
 										</div>
 									</fieldset>
 								</div>
 								<div class="filter-block">
 									<fieldset class="filter-block">
 										<legend class="filter-item-title">Bluetooth</legend>
-										<div class="filter-parametrs">
-											<label class="filter-item-label">
-												<input type="radio" name="bluetooth-filter" value="yes" checked>
-												Есть
-											</label>
-											<label class="filter-item-label">
-												<input type="radio" name="bluetooth-filter" value="no">
-												Нет
-											</label>
+										<div class="filter-parameters">
+											<input type="radio" name="bluetooth-filter" value="yes" id="bluetooth-on" checked>
+											<label for="bluetooth-on">Есть</label>
+											<input type="radio" name="bluetooth-filter" value="no" id="bluetooth-off">
+											<label for="bluetooth-off">Нет</label>
 										</div>
 									</fieldset>
 								</div>
@@ -230,8 +218,8 @@
 										<span class="product-price">2500 руб.</span>
 									</div>
 								</div>
-								<div class="product-box">
-									<img class="product-image product-new" src="img/product-item-04.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+								<div class="product-box product-new">
+									<img class="product-image" src="img/product-item-04.png" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
 									<form class="hide" action="https://echo.htmlacademy.ru" method="post">
 										<input type="hidden" name="id" value="004">
 										<button class="button" type="submit" name="card">В корзину</button>
@@ -281,16 +269,16 @@
 					</a>
 					<ul class="user-navigation user-navigation-footer">
 						<li>
-							<a href="#">Валентин Петухов</a>
+							<a class="login-link-footer" href="#">Валентин Петухов</a>
 						</li>
 						<li>
 							<a href="#">Выйти</a>
 						</li>
 						<li>
-							<a href="#">Сравнить</a>
+							<a class="compare-link-footer" href="#">Сравнить</a>
 						</li>
 						<li>
-							<a href="#">Корзина</a>
+							<a class="cart-link-footer" href="#">Корзина</a>
 						</li>
 					</ul>
 				</div>
@@ -314,14 +302,14 @@
 				<div class="main-footer-line">
 					<div class="footer-decorate"></div>
 					<ul class="footer-social">
-						<li class="social-button">
-							<a href="#">Facebook</a>
+						<li>
+							<a class="social-button social-facebook" href="#">Facebook</a>
 						</li>
-						<li class="social-button">
-							<a href="#">Instagram</a>
+						<li>
+							<a class="social-button social-instagram" href="#">Instagram</a>
 						</li>
-						<li class="social-button">
-							<a href="#">Twitter</a>
+						<li>
+							<a class="social-button social-twitter" href="#">Twitter</a>
 						</li>
 					</ul>
 					<a class="footer-developer" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">

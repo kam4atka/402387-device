@@ -370,17 +370,21 @@
 		<section class="modal modal-send hide">
 			<h2 class="visually-hidden">Напишите нам</h2>
 			<form action="https://echo.htmlacademy.ru" method="post">
-				<div>
-					<label class="writeus-name-label" for="writeus-name">Ваше имя:</label>
-					<input class="writeus-name" type="text" name="name" id="writeus-name" placeholder="Имя Фамилия">
+				<div class="modal-wrapper">
+					<div class="modal-item">
+						<label class="writeus-name-label" for="writeus-name">Ваше имя:</label>
+						<input class="writeus-name" type="text" name="name" id="writeus-name" placeholder="Имя Фамилия">
+					</div>
+					<div class="modal-item">
+						<label class="writeus-email-label" for="writeus-email">Ваше e-mail:</label>
+						<input class="writeus-email" type="email" name="email" id="writeus-email" placeholder="email@example.com">
+					</div>
 				</div>
-				<div>
-					<label class="writeus-email-label" for="writeus-email">Ваше e-mail:</label>
-					<input class="writeus-email" type="email" name="email" id="writeus-email" placeholder="email@example.com">
-				</div>
-				<div>
-					<label class="writeus-desc-label" for="writeus-desc">Текст письма:</label>
-					<textarea class="writeus-desc" name="description" id="writeus-desc">В свободной форме</textarea>
+				<div class="modal-wrapper">
+					<div class="modal-item">
+						<label class="writeus-desc-label" for="writeus-desc">Текст письма:</label>
+						<textarea class="writeus-desc" name="description" id="writeus-desc">В свободной форме</textarea>
+					</div>
 				</div>
 				<button class="button" type="submit">Отправить</button>
 			</form>
