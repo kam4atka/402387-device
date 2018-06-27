@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-		<input class="hide" type="radio" name="service-item" id="service-item-01">
-		<input class="hide" type="radio" name="service-item" id="service-item-02">
-		<input class="hide" type="radio" name="service-item" id="service-item-03">
 		<header class="main-header">
 			<div class="wrapper header-wrapper">
 				<a class="main-logo">
@@ -17,7 +14,6 @@
 				</a>
 				<div class="header-layout">
 					<form class="header-search" action="https://echo.htmlacademy.ru" method="post">
-						<button class="header-search-icon" type="submit"></button>
 						<label class="visually-hidden" for="header-search">Поиск по сайту</label>
 						<input class="header-search-item" type="search" name="search" id="header-search" placeholder="Поиск по сайту">
 						<button class="header-search-send" type="submit">Найти</button>
@@ -79,6 +75,14 @@
 				<h1 class="visually-hidden">Интернет-магазин гаджетов</h1>
 				<section class="slider">
 					<h2 class="visually-hidden">Слайдер товаров</h2>
+					<input class="hide" type="radio" name="slider-item" id="slider-item-01" checked>
+					<input class="hide" type="radio" name="slider-item" id="slider-item-02">
+					<input class="hide" type="radio" name="slider-item" id="slider-item-03">
+					<div class="slider-controls">
+						<label class="slider-control" for="slider-item-01">Первый слайд</label>
+						<label class="slider-control" for="slider-item-02">Второй слайд</label>
+						<label class="slider-control" for="slider-item-03">Третий слайд</label>
+					</div>
 					<ul class="slider-list">
 						<li class="slider-item">
 							<div class="slider-item-left">
@@ -103,7 +107,7 @@
 								</table>
 							</div>
 						</li>
-						<li class="slider-item hide">
+						<li class="slider-item">
 							<div class="slider-item-left">
 								<img src="img/slider-item-02.png" width="385" height="485" alt="Фитнес-браслет">
 							</div>
@@ -122,12 +126,12 @@
 								</table>
 							</div>
 						</li>
-						<li class="slider-item hide">
+						<li class="slider-item">
 							<div class="slider-item-left">
 								<img src="img/slider-item-03.png" width="525" height="335" alt="Квадрокоптер">
 							</div>
 							<div class="slider-item-right">
-								<p class="slider-item-title">Порхает как бабочка, жалит как пчела!</p>
+								<p class="slider-item-title">Порхает как бабочка,<br>жалит как пчела!</p>
 								<p class="slider-item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 								<a class="button" href="#">Подробнее</a>
 								<table class="slider-item-parameters">
@@ -144,14 +148,6 @@
 							</div>
 						</li>
 					</ul>
-					<div class="slider-controls">
-						<input class="hide" type="radio" name="slider-item" id="slider-item-01" checked>
-						<label class="slider-control" for="slider-item-01">Первый слайд</label>
-						<input class="hide" type="radio" name="slider-item" id="slider-item-02">
-						<label class="slider-control" for="slider-item-02">Второй слайд</label>
-						<input class="hide" type="radio" name="slider-item" id="slider-item-03">
-						<label class="slider-control" for="slider-item-03">Третий слайд</label>
-					</div>
 				</section>
 				<section class="category">
 					<h2 class="visually-hidden">Категории товаров</h2>
@@ -223,38 +219,43 @@
 				<div class="wrapper">
 					<h2 class="visually-hidden">Дополнительные услуги</h2>
 					<div class="service-wrapper">
+						<input class="hide" type="radio" name="service-item" id="service-item-01" checked>
+						<input class="hide" type="radio" name="service-item" id="service-item-02">
+						<input class="hide" type="radio" name="service-item" id="service-item-03">
 						<div class="service-controls">
-
-							<label class="service-control-wrapper-active" for="service-item-01">
+							<label class="service-control-wrapper" for="service-item-01">
 								<span class="service-control">Доставка</span>
 							</label>
-							
 							<label class="service-control-wrapper" for="service-item-02">
 								<span class="service-control">Гарантия</span>
 							</label>
-							
 							<label class="service-control-wrapper" for="service-item-03">
 								<span class="service-control">Кредит</span>
 							</label>
-							
 						</div>
 						<div class="service-items">
-							<div class="service-item">
-								<div class="service-item-wrapper">
-									<p class="service-title">Доставка</p>
-									<p class="service-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+							<div class="service-items-wrapper">
+								<div class="service-item">
+									<div class="service-item-wrapper">
+										<p class="service-title">Доставка</p>
+										<p class="service-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+									</div>
+									<img class="service-image" src="img/service-delivery.svg" width="135" height="165" alt="">
 								</div>
-								<img class="service-image" src="img/service-delivery.svg" width="135" height="165" alt="">
-							</div>
-							<div class="service-item hide">
-								<p class="service-title">Гарантия</p>
-								<p class="service-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-								<img class="service-image" src="img/service-warranty.svg" width="170" height="195" alt="">
-							</div>
-							<div class="service-item hide">
-								<p class="service-title">Кредит</p>
-								<p class="service-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-								<img class="service-image" src="img/service-credit.svg" width="155" height="185" alt="">
+								<div class="service-item">
+									<div class="service-item-wrapper">
+										<p class="service-title">Гарантия</p>
+										<p class="service-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+									</div>
+									<img class="service-image" src="img/service-warranty.svg" width="170" height="195" alt="">
+								</div>
+								<div class="service-item">
+									<div class="service-item-wrapper">
+										<p class="service-title">Кредит</p>
+										<p class="service-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+									</div>
+									<img class="service-image" src="img/service-credit.svg" width="155" height="185" alt="">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -300,7 +301,7 @@
 							<li>Автотрейдинг</li>
 							<li>ЖелДорЭкспедиция</li>
 						</ul>
-						<a class="button" href="#">Подробнее о нас</a>
+						<a class="button aboutus-button" href="#">Подробнее о нас</a>
 					</section>
 					<section class="contacts">
 						<h2>Контакты</h2>
@@ -308,7 +309,7 @@
 						<a class="contact-map" href="#">
 							<img src="img/map-small.jpg" width="560" height="220" alt="Место нахождения офиса на карте. Адрес: г. Москва, улица Строителей, 15">
 						</a>
-						<a class="button" href="#">Напишите нам</a>
+						<a class="button contacts-button" href="#">Напишите нам</a>
 					</section>
 				</div>
 			</div>
@@ -395,5 +396,6 @@
 			<img src="img/map-big.jpg" width="960" height="560" alt="Место нахождения офиса на карте. Адрес: г. Москва, улица Строителей, 15">
 			<button class="modal-close" type="button">Закрыть</button>
 		</section>
+		<script src="js/script.js"></script>
   </body>
 </html>
