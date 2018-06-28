@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
@@ -15,7 +15,7 @@
 				<div class="header-layout">
 					<form class="header-search" action="https://echo.htmlacademy.ru" method="post">
 						<label class="visually-hidden" for="header-search">Поиск по сайту</label>
-						<input class="header-search-item" type="search" name="search" id="header-search" placeholder="Поиск по сайту">
+						<input class="header-search-item" type="search" name="search" id="header-search" placeholder="Поиск по сайту" required>
 						<button class="header-search-send" type="submit">Найти</button>
 					</form>
 					<ul class="user-navigation">
@@ -33,8 +33,8 @@
 				<nav class="header-layout">
 					<ul class="catalog-navigation">
 						<li>
-							<a class="catalog-list">Каталог товаров</a>
-							<ul class="catalog-item-navigation visually-hidden">
+							<button class="catalog-list" type="button">Каталог товаров</button>
+							<ul class="catalog-item-navigation hide">
 								<li>
 									<ul class="catalog-item-subnav">
 										<li>
@@ -87,16 +87,16 @@
 				<h1 class="visually-hidden">Интернет-магазин гаджетов</h1>
 				<section class="slider">
 					<h2 class="visually-hidden">Слайдер товаров</h2>
-					<input class="slider-input-1 hide" type="radio" name="slider-item" id="slider-item-01" checked>
-					<input class="slider-input-2 hide" type="radio" name="slider-item" id="slider-item-02">
-					<input class="slider-input-3 hide" type="radio" name="slider-item" id="slider-item-03">
+					<input class="slider-input-1 visually-hidden" type="radio" name="slider-item" id="slider-item-01" checked>
+					<input class="slider-input-2 visually-hidden" type="radio" name="slider-item" id="slider-item-02">
+					<input class="slider-input-3 visually-hidden" type="radio" name="slider-item" id="slider-item-03">
 					<div class="slider-controls">
-						<label class="slider-control" for="slider-item-01">Первый слайд</label>
-						<label class="slider-control" for="slider-item-02">Второй слайд</label>
-						<label class="slider-control" for="slider-item-03">Третий слайд</label>
+						<label class="slider-control slider-control-1" for="slider-item-01" tabindex="0">Первый слайд</label>
+						<label class="slider-control slider-control-2" for="slider-item-02" tabindex="0">Второй слайд</label>
+						<label class="slider-control slider-control-3" for="slider-item-03" tabindex="0">Третий слайд</label>
 					</div>
 					<ul class="slider-list">
-						<li class="slider-item">
+						<li class="slider-item slider-item-1">
 							<div class="slider-item-left">
 								<img src="img/slider-item-01.png" width="385" height="485" alt="Монопод для селфи">
 							</div>
@@ -119,14 +119,14 @@
 								</table>
 							</div>
 						</li>
-						<li class="slider-item">
+						<li class="slider-item slider-item-2">
 							<div class="slider-item-left">
 								<img src="img/slider-item-02.png" width="385" height="485" alt="Фитнес-браслет">
 							</div>
 							<div class="slider-item-right">
 								<p class="slider-item-title">Худеем <br>правильно!</p>
 								<p class="slider-item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-								<a class="button" href="#">Подробнее</a>
+								<a class="button" href="#" tabindex="-1">Подробнее</a>
 								<table class="slider-item-parameters">
 									<caption class="visually-hidden">Характеристики товара</caption>
 									<tr>
@@ -138,14 +138,14 @@
 								</table>
 							</div>
 						</li>
-						<li class="slider-item">
+						<li class="slider-item slider-item-3">
 							<div class="slider-item-left">
 								<img src="img/slider-item-03.png" width="525" height="335" alt="Квадрокоптер">
 							</div>
 							<div class="slider-item-right">
 								<p class="slider-item-title">Порхает как бабочка,<br>жалит как пчела!</p>
 								<p class="slider-item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-								<a class="button" href="#">Подробнее</a>
+								<a class="button" href="#" tabindex="-1">Подробнее</a>
 								<table class="slider-item-parameters">
 									<caption class="visually-hidden">Характеристики товара</caption>
 									<tr>
@@ -236,13 +236,13 @@
 						<input class="service-input-3 visually-hidden" type="radio" name="service-item" id="service-item-03">
 						<div class="service-controls">
 							<label class="service-control-wrapper" for="service-item-01">
-								<span class="service-control">Доставка</span>
+								<span class="service-control service-control-1">Доставка</span>
 							</label>
 							<label class="service-control-wrapper" for="service-item-02">
-								<span class="service-control">Гарантия</span>
+								<span class="service-control service-control-2">Гарантия</span>
 							</label>
 							<label class="service-control-wrapper" for="service-item-03">
-								<span class="service-control">Кредит</span>
+								<span class="service-control service-control-3">Кредит</span>
 							</label>
 						</div>
 						<div class="service-items">
@@ -405,7 +405,7 @@
 		</section>
 		<section class="modal modal-map hide">
 			<h2 class="visually-hidden">Место нахождения офиса на карте</h2>
-			<iframe src="https://yandex.ru/map-widget/v1/-/CBum7EBigA" width="960" height="560" frameborder="1" allowfullscreen="true"></iframe>
+			<iframe src="https://yandex.ru/map-widget/v1/-/CBum7EBigA" width="960" height="560" tabindex="-1"></iframe>
 			<button class="modal-close" type="button">Закрыть</button>
 		</section>
 		<div class="modal-overlay hide"></div>

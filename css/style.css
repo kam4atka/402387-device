@@ -70,8 +70,10 @@ img {
 	color: #000000;
 }
 
-.main-logo-link:hover {
+.main-logo-link:hover,
+.main-logo-link:focus {
 	opacity: 0.6;
+	outline: none;
 }
 
 .main-logo-link:active {
@@ -135,12 +137,8 @@ img {
 	border-bottom: 2px solid #000000;
 }
 
-.header-search-item:focus + .header-search-send {
-	display: inline-block;
-	vertical-align: top;
-}
-
-.header-search-item[value^=" "] + .header-search-send {
+.header-search-item:focus + .header-search-send,
+.header-search-item:valid + .header-search-send {
 	display: inline-block;
 	vertical-align: top;
 }
@@ -176,6 +174,15 @@ img {
 	line-height: 24px;
 	letter-spacing: 3.6px;
 	text-transform: uppercase;
+}
+
+.catalog-list {
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 3.6px;
+	text-transform: uppercase;	
 }
 
 .user-navigation,
@@ -263,6 +270,18 @@ img {
 .catalog-list {
 	position: relative;
 	padding-right: 30px;
+	background-color: transparent;
+	border: none;
+}
+
+.catalog-list:hover,
+.catalog-list:focus {
+	color: rgba(0, 0, 0, 0.6);
+	outline: none;
+}
+
+.catalog-list:active {
+	color: rgba(0, 0, 0, 0.3);
 }
 
 .catalog-list::after {
@@ -275,6 +294,7 @@ img {
 	background-image: url("../img/icon-plus.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
+	opacity: 0.3;
 }
 
 .slider-list {
@@ -309,9 +329,9 @@ img {
 .button {
 	position: relative;
 	display: inline-block;
+	vertical-align: top;
 	width: 220px;
 	padding: 8px 0 8px 0;
-	vertical-align: top;
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-size: 18px;
 	font-weight: 400;
@@ -328,18 +348,19 @@ img {
 .button::before {
 	position: absolute;
 	display: block;
-	top: 16px;
+	top: 50%;
 	width: 100%;
 	height: 8px;
 	content: "";
 	background-color: #f0c52e;
 	z-index: -1;
+	transform: translateY(-50%);
 }
 
-.button:hover::before {
-	top: 0px;
+.button:hover::before,
+.button:focus::before {
 	height: 100%;
-	transition: height, top 0.5s, 0.4s linear;
+	transition: height 0.5s linear;
 }
 
 .button:active {
@@ -439,15 +460,15 @@ img {
 	background-color: #000000;
 }
 
-.service-input-1:checked ~ .service-controls .service-control-wrapper[for="service-item-01"] .service-control,
-.service-input-2:checked ~ .service-controls .service-control-wrapper[for="service-item-02"] .service-control,
-.service-input-3:checked ~ .service-controls .service-control-wrapper[for="service-item-03"] .service-control {
+.service-input-1:checked ~ .service-controls .service-control-1,
+.service-input-2:checked ~ .service-controls .service-control-2,
+.service-input-3:checked ~ .service-controls .service-control-3 {
 	color: #f7e184;
 }
 
-.service-input-1:checked ~ .service-controls .service-control-wrapper[for="service-item-01"] .service-control::before,
-.service-input-2:checked ~ .service-controls .service-control-wrapper[for="service-item-02"] .service-control::before,
-.service-input-3:checked ~ .service-controls .service-control-wrapper[for="service-item-03"] .service-control::before {
+.service-input-1:checked ~ .service-controls .service-control-1::before,
+.service-input-2:checked ~ .service-controls .service-control-2::before,
+.service-input-3:checked ~ .service-controls .service-control-3::before {
 	content: none;
 	background-color: transparent;
 }
@@ -466,18 +487,36 @@ img {
 }
 
 .brand-item {
-	width: 260px;
-	overflow: hidden;
+	position: relative;
 }
 
-.brand-item a {
-	display: flex;
+.brand-item img {
+	transition: opacity 0.3s;
 }
 
-.brand-item a:hover,
+.brand-item-active {
+	opacity: 1;
+}
+
+.brand-item-inactive {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
 .brand-item a:focus {
-	transform: translateX(-260px);
 	outline: none;
+}
+
+.brand-item:hover .brand-item-active,
+.brand-item a:focus .brand-item-active {
+	opacity: 0;
+}
+
+.brand-item:hover .brand-item-inactive,
+.brand-item a:focus .brand-item-inactive {
+	opacity: 1;
 }
 
 .aboutus h2,
@@ -511,8 +550,10 @@ img {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.breadcrumbs-item a:hover {
+.breadcrumbs-item a:hover,
+.breadcrumbs-item a:focus {
 	color: rgba(0, 0, 0, 0.6);
+	outline: none;
 }
 
 .breadcrumbs-item a:active {
@@ -624,8 +665,10 @@ img {
 	color: rgba(0,0,0,0.3);
 }
 
-.sorting-item:hover {
+.sorting-item:hover,
+.sorting-item:focus {
 	color: rgba(0,0,0,0.6);
+	outline: none;
 }
 
 .sorting-up,
@@ -634,7 +677,9 @@ img {
 }
 
 .sorting-up:hover,
-.sorting-down:hover {
+.sorting-up:focus::before,
+.sorting-down:hover,
+.sorting-down:focus::before {
 	opacity: 0.4;
 }
 
@@ -867,6 +912,10 @@ img {
 	color: rgba(70,70,70,0.4);
 }
 
+.writeus-desc {
+	resize: none;
+}
+
 .modal-item input[type="text"],
 .modal-item input[type="email"],
 .modal-item textarea {
@@ -953,6 +1002,10 @@ img {
 	z-index: 1;
 }
 
+.no-js .catalog-item-navigation {
+	display: flex;
+}
+
 .user-navigation {
 	display: flex;
 	justify-content: flex-end;
@@ -995,7 +1048,7 @@ img {
 .slider-item {
 	display: flex;
 	justify-content: space-around;
-	width: 95%;
+	max-width: 95%;
 	margin: 0 auto;
 }
 
@@ -1060,19 +1113,19 @@ img {
 	position: absolute;
 	bottom: 150px;
 	right: 80px;
+	z-index: 1;
 }
 
 .slider-control {
 	position: relative;
 	display: inline-block;
+	vertical-align: middle;
 	width: 12px;
 	height: 12px;
 	margin-right: 20px;
-	vertical-align: middle;
 	border: 1px solid #050505;
 	border-radius: 50%;
 	font-size: 0;
-	z-index: 1;
 }
 
 .slider-control::before {
@@ -1174,9 +1227,9 @@ img {
 .service-control {
 	position: relative;
 	display: inline-block;
+	vertical-align: middle;
 	min-width: 160px;
 	padding: 8px 0;
-	vertical-align: middle;
 	text-align: center;
 	z-index: 1;
 }
@@ -1455,7 +1508,6 @@ img {
 }
 
 .product-box {
-	position: relative;
 	display: flex;
 	flex-direction: column;
 	margin-top: 40px;
@@ -1469,16 +1521,24 @@ img {
 	opacity: 0.7;
 }
 
+.product-box-preview {
+	position: relative;
+}
+
 .product-box-inside {
 	display: none;
 }
 
-.product-box:hover .product-box-inside {
+.product-box-preview:hover .product-box-inside {
 	position: absolute;
-	top: 45%;
-	left: 50%;
-	display: block;
-	transform: translate(-50%, -50%);
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .product-image {
@@ -1581,9 +1641,9 @@ img {
 
 .social-button {
 	display: inline-block;
+	vertical-align: middle;
 	width: 32px;
 	height: 32px;
-	vertical-align: middle;
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	font-size: 0;
