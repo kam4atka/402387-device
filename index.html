@@ -34,24 +34,36 @@
 					<ul class="catalog-navigation">
 						<li>
 							<a class="catalog-list">Каталог товаров</a>
-							<ul class="catalog-item-navigation hide">
+							<ul class="catalog-item-navigation visually-hidden">
 								<li>
-									<a href="#">Виртуальная реальность</a>
+									<ul class="catalog-item-subnav">
+										<li>
+											<a href="#">Виртуальная реальность</a>
+										</li>
+										<li>
+											<a href="monopod.html">Моноподы для селфи</a>
+										</li>
+										<li>
+											<a href="#">Экшн-камеры</a>
+										</li>
+									</ul>
 								</li>
 								<li>
-									<a href="monopod.html">Моноподы для селфи</a>
+									<ul class="catalog-item-subnav">
+										<li>
+											<a href="#">Фитнес-браслеты</a>
+										</li>
+										<li>
+											<a href="#">Умные часы</a>
+										</li>
+									</ul>
 								</li>
 								<li>
-									<a href="#">Экшн-камеры</a>
-								</li>
-								<li>
-									<a href="#">Фитнес-браслеты</a>
-								</li>
-								<li>
-									<a href="#">Умные часы</a>
-								</li>
-								<li>
-									<a href="#">Квадрокоптеры</a>
+									<ul class="catalog-item-subnav">
+										<li>
+											<a href="#">Квадрокоптеры</a>
+										</li>
+									</ul>
 								</li>
 							</ul>
 						</li>
@@ -75,9 +87,9 @@
 				<h1 class="visually-hidden">Интернет-магазин гаджетов</h1>
 				<section class="slider">
 					<h2 class="visually-hidden">Слайдер товаров</h2>
-					<input class="hide" type="radio" name="slider-item" id="slider-item-01" checked>
-					<input class="hide" type="radio" name="slider-item" id="slider-item-02">
-					<input class="hide" type="radio" name="slider-item" id="slider-item-03">
+					<input class="slider-input-1 hide" type="radio" name="slider-item" id="slider-item-01" checked>
+					<input class="slider-input-2 hide" type="radio" name="slider-item" id="slider-item-02">
+					<input class="slider-input-3 hide" type="radio" name="slider-item" id="slider-item-03">
 					<div class="slider-controls">
 						<label class="slider-control" for="slider-item-01">Первый слайд</label>
 						<label class="slider-control" for="slider-item-02">Второй слайд</label>
@@ -219,9 +231,9 @@
 				<div class="wrapper">
 					<h2 class="visually-hidden">Дополнительные услуги</h2>
 					<div class="service-wrapper">
-						<input class="hide" type="radio" name="service-item" id="service-item-01" checked>
-						<input class="hide" type="radio" name="service-item" id="service-item-02">
-						<input class="hide" type="radio" name="service-item" id="service-item-03">
+						<input class="service-input-1 visually-hidden" type="radio" name="service-item" id="service-item-01" checked>
+						<input class="service-input-2 visually-hidden" type="radio" name="service-item" id="service-item-02">
+						<input class="service-input-3 visually-hidden" type="radio" name="service-item" id="service-item-03">
 						<div class="service-controls">
 							<label class="service-control-wrapper" for="service-item-01">
 								<span class="service-control">Доставка</span>
@@ -267,26 +279,26 @@
 					<ul class="brand-list">
 						<li class="brand-item">
 							<a href="#">
-								<img class="brand-item-inactive" src="img/brand-item-dji.png" width="260" height="100" alt="DJI" aria-hidden="true">
 								<img class="brand-item-active" src="img/brand-item-dji-alpha.png" width="260" height="100" alt="DJI">
+								<img class="brand-item-inactive" src="img/brand-item-dji.png" width="260" height="100" alt="DJI" aria-hidden="true">
 							</a>
 						</li>
 						<li class="brand-item">
 							<a href="#">
-								<img class="brand-item-inactive" src="img/brand-item-spgadget.png" width="260" height="100" alt="SPGagets" aria-hidden="true">
 								<img class="brand-item-active" src="img/brand-item-spgadget-alpha.png" width="260" height="100" alt="SPGagets">
+								<img class="brand-item-inactive" src="img/brand-item-spgadget.png" width="260" height="100" alt="SPGagets" aria-hidden="true">
 							</a>
 						</li>
 						<li class="brand-item">
 							<a href="#">
-								<img class="brand-item-inactive" src="img/brand-item-gopro.png" width="260" height="100" alt="GoPro" aria-hidden="true">
 								<img class="brand-item-active" src="img/brand-item-gopro-alpha.png" width="260" height="100" alt="GoPro">
+								<img class="brand-item-inactive" src="img/brand-item-gopro.png" width="260" height="100" alt="GoPro" aria-hidden="true">
 							</a>
 						</li>
 						<li class="brand-item">
 							<a href="#">
-								<img class="brand-item-inactive" src="img/brand-item-vive.png" width="260" height="100" alt="Vive" aria-hidden="true">
 								<img class="brand-item-active" src="img/brand-item-vive-alpha.png" width="260" height="100" alt="Vive">
+								<img class="brand-item-inactive" src="img/brand-item-vive.png" width="260" height="100" alt="Vive" aria-hidden="true">
 							</a>
 						</li>
 					</ul>
@@ -307,7 +319,7 @@
 						<h2>Контакты</h2>
 						<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 						<a class="contact-map" href="#">
-							<img src="img/map-small.jpg" width="560" height="220" alt="Место нахождения офиса на карте. Адрес: г. Москва, улица Строителей, 15">
+							<img class="map-preview" src="img/map-small.jpg" width="560" height="220" alt="Место нахождения офиса на карте. Адрес: г. Москва, улица Строителей, 15">
 						</a>
 						<a class="button contacts-button" href="#">Напишите нам</a>
 					</section>
@@ -393,9 +405,10 @@
 		</section>
 		<section class="modal modal-map hide">
 			<h2 class="visually-hidden">Место нахождения офиса на карте</h2>
-			<img src="img/map-big.jpg" width="960" height="560" alt="Место нахождения офиса на карте. Адрес: г. Москва, улица Строителей, 15">
+			<iframe src="https://yandex.ru/map-widget/v1/-/CBum7EBigA" width="960" height="560" frameborder="1" allowfullscreen="true"></iframe>
 			<button class="modal-close" type="button">Закрыть</button>
 		</section>
+		<div class="modal-overlay hide"></div>
 		<script src="js/script.js"></script>
   </body>
 </html>
