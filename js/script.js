@@ -42,7 +42,7 @@ function setCloseEvent(root) {
 };
 
 function setCloseEsc(root) {
-	window.addEventListener("keydown", function(evt) {
+	window.addEventListener('keydown', function(evt) {
 		if (evt.keyCode === 27) {
 			evt.preventDefault();
 			if (!root.classList.contains('hide')) {
@@ -100,12 +100,14 @@ if (writeUs) {
 	writeUs.addEventListener('click', writeUsHendler);
 }
 
+function mapUsHendler(evt) {
+	evt.preventDefault();
+	modalOverlay.classList.remove('hide');
+	modalMap.classList.remove('hide');
+	setCloseEvent(modalMap);
+	setCloseEsc(modalMap);
+}
+
 if (mapUs) {
-	mapUs.addEventListener('click', function(evt) {
-		evt.preventDefault();
-		modalOverlay.classList.remove('hide');
-		modalMap.classList.remove('hide');
-		setCloseEvent(modalMap);
-		setCloseEsc(modalMap);
-	});
+	mapUs.addEventListener('click', mapUsHendler);
 }
