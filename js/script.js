@@ -5,7 +5,7 @@ var subNav = document.querySelector('.catalog-item-navigation');
 
 var writeUs = document.querySelector('.contacts-button');
 var modalSend = document.querySelector('.modal-send');
-var mapUs = document.querySelector('.map-preview');
+var mapUs = document.querySelector('.contact-map');
 var modalMap = document.querySelector('.modal-map');
 var modalOverlay = document.querySelector('.modal-overlay');
 
