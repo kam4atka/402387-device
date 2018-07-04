@@ -95,7 +95,7 @@ img {
 
 .header-search::before {
 	position: absolute;
-	top: 50%;
+	top: 20px;
 	left: 2px;
 	width: 16px;
 	height: 16px;
@@ -442,7 +442,7 @@ img {
 }
 
 .services {
-	height: 390px;
+	min-height: 390px;
 	background-image: linear-gradient(transparent 0, transparent 100px, #e5e5e5 100px);
 }
 
@@ -601,6 +601,8 @@ img {
 	letter-spacing: 0.91px;
 	text-transform: uppercase;
 	color: #000000;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .filter-item-title {
@@ -1049,6 +1051,7 @@ img {
 
 .user-navigation {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 }
 
@@ -1058,6 +1061,7 @@ img {
 
 .site-navigation {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 }
 
@@ -1091,6 +1095,7 @@ img {
 	justify-content: center;
 	width: 95%;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .slider-item-left {
@@ -1161,8 +1166,11 @@ img {
 
 .slider-controls {
 	position: absolute;
-	bottom: 145px;
-  right: 60px;
+	top: 308px;
+  right: 68px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
 	z-index: 1;
 }
 
@@ -1176,6 +1184,10 @@ img {
 	border: 1px solid #050505;
 	border-radius: 50%;
 	font-size: 0;
+}
+
+.slider-control:last-child {
+	margin-right: 0;
 }
 
 .slider-control::before {
@@ -1221,6 +1233,7 @@ img {
 .category-items {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	margin-bottom: 80px;
 }
 
@@ -1332,6 +1345,7 @@ img {
 
 .brand-list {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0;
 	padding: 0;
@@ -1459,6 +1473,9 @@ img {
 }
 
 .filter {
+	display: flex;
+	align-items: center;
+	max-width: 330px;
 	padding-left: 60px;
 }
 
@@ -1470,14 +1487,26 @@ img {
 	padding-left: 70px;
 }
 
+.sorting-parameters {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+}
+
 .filters {
-	padding: 70px 0 0 60px;
+	padding: 70px 0 50px 60px;
 }
 
 .filter-title,
 .sorting-title {
 	margin: 0;
 	padding: 0;
+}
+
+.sorting-title {
+	width: 260px;
 }
 
 .filter-block {
@@ -1578,7 +1607,7 @@ img {
 }
 
 .sorting-item:first-of-type {
-	margin-left: 80px;
+	margin-left: 8px;
 }
 
 .sorting-up,
@@ -1752,6 +1781,7 @@ img {
 
 .product-desc span {
 	padding: 5px 0;
+	max-width: 135px;
 }
 
 .products-navigation {
@@ -1760,6 +1790,7 @@ img {
 
 .products-navigation-list {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 
@@ -1803,7 +1834,7 @@ img {
 }
 
 .main-footer-line nav {
-	align-self: flex-end;
+	margin-top: 8px;
 }
 
 .user-navigation-footer {
@@ -1836,10 +1867,15 @@ img {
 	margin-left: 15px;
 }
 
+.footer-address {
+	max-width: 250px;
+}
+
 .footer-social {
 	position: relative;
   left: -25px;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	width: 141px;
 	margin: 0;
