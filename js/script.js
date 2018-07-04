@@ -9,8 +9,6 @@ var mapUs = document.querySelector('.contact-map');
 var modalMap = document.querySelector('.modal-map');
 var modalOverlay = document.querySelector('.modal-overlay');
 
-
-
 if (modalSend) {
 	var formSend = modalSend.querySelector('form');
 	var userName = modalSend.querySelector('.writeus-name');
@@ -57,6 +55,7 @@ function setCloseEsc(root) {
 
 function writeUsHendler(evt) {
 	evt.preventDefault();
+	modalSend.classList.remove('modal-error');
 	modalOverlay.classList.remove('hide');
 	modalSend.classList.remove('hide');
 	setCloseEvent(modalSend);
@@ -82,12 +81,15 @@ function writeUsHendler(evt) {
 	}
 
 	formSend.addEventListener('submit', function(evt) {
+		modalSend.classList.remove('modal-error');
 		if(!userName.value) {
 			evt.preventDefault();
 			userName.focus();
+			modalSend.classList.add('modal-error');
 		} else if (userName.value && !userEmail.value ) {
 			evt.preventDefault();
 			userEmail.focus();
+			modalSend.classList.add('modal-error');
 		} else {
 			localStorage.setItem("name", userName.value);
 			localStorage.setItem("email", userEmail.value);
