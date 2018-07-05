@@ -997,7 +997,6 @@ img {
 .modal-item input[type="email"]:invalid,
 .modal-item textarea:invalid {
 	background-color: #edb5b5;
-	border: none;
 }
 
 .wrapper {

@@ -1,5 +1,8 @@
 var noJs = document.querySelector('html');
 
+var currentNav = document.querySelector('.catalog-list');
+var subNav = document.querySelector('.catalog-item-navigation');
+
 var writeUs = document.querySelector('.contacts-button');
 var modalSend = document.querySelector('.modal-send');
 var mapUs = document.querySelector('.contact-map');
@@ -18,6 +21,10 @@ var storageName = "";
 var storageEmail = "";
 
 noJs.classList.remove('no-js');
+
+currentNav.addEventListener('click', function(evt) {
+	subNav.classList.toggle('hide');
+});
 
 function setCloseEvent(root) {
 	var modalClose = root.querySelector('.modal-close');
