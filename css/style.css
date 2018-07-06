@@ -70,6 +70,10 @@ img {
 	color: #000000;
 }
 
+.inner-page .main-logo {
+	letter-spacing: 0.48px;
+}
+
 .main-logo-link:hover,
 .main-logo-link:focus {
 	opacity: 0.6;
@@ -109,6 +113,12 @@ img {
 }
 
 .header-search-item {
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 30px;
+	color: #000000;
+	letter-spacing: 0.15px;
 	background-color: transparent;
 	border: 0;
 	opacity: 0.3;
@@ -134,13 +144,16 @@ img {
 	border: 2px solid #000000;
 }
 
-.header-search-item:focus {
+.header-search-item:focus,
+.header-search-item:active {
 	opacity: 1;
 	border-bottom: 2px solid #000000;
 }
 
 .header-search-item:focus + .header-search-send,
-.header-search-item:valid + .header-search-send {
+.header-search-item:valid + .header-search-send,
+.header-search-send:hover,
+.header-search-send:focus {
 	display: inline-block;
 	vertical-align: top;
 }
@@ -194,7 +207,7 @@ img {
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 15px;
 	font-weight: 300;
-	line-height: 36px;
+	line-height: 30px;
 	letter-spacing: 0.15px;
 	text-transform: none;
 }
@@ -203,6 +216,7 @@ img {
 	margin: 0;
 	padding: 0 60px 0 0;
 	list-style: none;
+	line-height: 36px;
 }
 
 .user-navigation a,
@@ -730,6 +744,7 @@ img {
 	font-size: 13px;
 	font-weight: 300;
 	line-height: 36px;
+	letter-spacing: 0.13px;
 	color: rgba(0,0,0,0.5);
 	background-color: transparent;
 	border: none;
@@ -761,7 +776,7 @@ img {
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 24px;
-	letter-spacing: 0.15px;
+	letter-spacing: 0.16px;
 }
 
 .product-new::before {
@@ -1097,8 +1112,8 @@ img {
 
 .slider {
 	position: relative;
+	min-height: 495px;
 	margin-bottom: 100px;
-	overflow: hidden;
 }
 
 .slider-list {
@@ -1190,11 +1205,8 @@ img {
 
 .slider-controls {
 	position: absolute;
-	top: 308px;
+	bottom: 145px;
   right: 68px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
 	z-index: 1;
 }
 
