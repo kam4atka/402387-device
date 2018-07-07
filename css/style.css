@@ -1654,7 +1654,11 @@ img {
 .sorting-up,
 .sorting-down {
 	position: relative;
-	font-size: 0;	
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	align-self: center;
+	font-size: 0px;	
 }
 
 .sorting-up::before,
@@ -1680,11 +1684,11 @@ img {
 
 .sorting-up:nth-child(n) {
 	margin-left: auto;
-	margin-right: 27px;
+	margin-right: 20px;
 }
 
 .sorting-down:nth-child(n) {
-	margin: 0 10px 0 0;
+	margin: 0;
 }
 
 
