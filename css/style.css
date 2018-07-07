@@ -363,7 +363,7 @@ img {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 24px;
-	letter-spacing: 2.15px;
+	letter-spacing: 4px;
 	text-transform: uppercase;
 	text-align: center;
 	color: #000000;
@@ -486,7 +486,7 @@ img {
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 24px;
-	letter-spacing: 2.15px;
+	letter-spacing: 4px;
 	color: #000000;
 	text-transform: uppercase;
 }
@@ -627,7 +627,7 @@ img {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
-	letter-spacing: 0.91px;
+	letter-spacing: 4.01px;
 	text-transform: uppercase;
 	color: #000000;
 	overflow: hidden;
@@ -802,7 +802,7 @@ img {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
-	letter-spacing: 0.91px;
+	letter-spacing: 4.01px;
 	text-transform: uppercase;
 	color: #000000;
 }
@@ -849,7 +849,7 @@ img {
 
 .footer-logo {
 	position: relative;
-  top: 10px;
+  top: 6px;
 	color: #ffc600;
 	letter-spacing: 0.48px;
 }
@@ -1137,14 +1137,14 @@ img {
   display: flex;
   flex-direction: column;
 	width: 50%;
-	margin-right: 47px;
-	padding-left: 46px;
+	margin-right: 40px;
+	padding-left: 40px;
 }
 
 .slider-item-right::before {
 	position: absolute;
 	top: -12px;
-	right: -10px;
+	right: -5px;
 }
 
 .slider-item-1 .slider-item-right::before {
@@ -1205,8 +1205,8 @@ img {
 
 .slider-controls {
 	position: absolute;
-	bottom: 145px;
-  right: 68px;
+	bottom: 147px;
+  right: 80px;
 	z-index: 1;
 }
 
@@ -1230,8 +1230,8 @@ img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 5px;
-	height: 5px;
+	width: 4px;
+	height: 4px;
 	content: none;
 	border: 1px solid #050505;
 	border-radius: 50%;
@@ -1281,11 +1281,11 @@ img {
 .services,
 .brands,
 .info-wrapper {
-	margin-bottom: 90px;
+	margin-bottom: 89px;
 }
 
 .info-wrapper {
-	margin-bottom: 80px;
+	margin-bottom: 83px;
 }
 
 .service-wrapper {
@@ -1413,7 +1413,7 @@ img {
 .aboutus h2,
 .contacts h2 {
 	margin: 0;
-	padding: 50px 0 40px 0;
+	padding: 52px 0 40px 0;
 }
 
 .aboutus p,
@@ -1529,7 +1529,7 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: baseline;
 	width: 100%;
 }
 
@@ -1644,7 +1644,7 @@ img {
 }
 
 .sorting-item:not(:first-of-type) {
-	margin-left: 30px;
+	margin-left: 27px;
 }
 
 .sorting-item:first-of-type {
@@ -1845,7 +1845,7 @@ img {
 }
 
 .products-navigation {
-	margin: 0 0 75px 70px;
+	margin: 0 0 77px 70px;
 }
 
 .products-navigation-list {
@@ -1855,7 +1855,7 @@ img {
 }
 
 .products-navigation-list li {
-	padding: 20px 15px;
+	padding: 20px 13px;
 }
 
 .products-navigation-list li:first-child {
@@ -1866,7 +1866,7 @@ img {
 .products-navigation-list li:last-child {
 	margin-left: auto;
 	margin-right: 0;
-	padding: 20px 30px;
+	padding: 20px 25px;
 }
 
 .main-footer {
@@ -1891,10 +1891,6 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-
-.main-footer-line nav {
-	margin-top: 8px;
 }
 
 .user-navigation-footer {
