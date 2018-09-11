@@ -1015,7 +1015,7 @@ img {
 }
 
 .wrapper {
-	width: 1160px;
+	max-width: 1160px;
 	margin: 0 auto;
 }
 
@@ -1028,7 +1028,7 @@ img {
 
 .main-wrapper {
 	padding-top: 40px;
-	padding-left: 60px;
+	padding-left: 50px;
 }
 
 .main-logo {
